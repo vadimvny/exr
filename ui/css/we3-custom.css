@@ -1,0 +1,264 @@
+body.we3-page .container{height:auto;}
+body .we3-listing-page .listing-detail-main-info .broker-profile .broker-details h4,
+body .we3-listing-page .listing-detail-main-info .info-agent .agent-profile .brokerage a{text-transform:uppercase;}
+body .we3 .agent .agent-main-info .brokerage-thumbnail{background-color:#05A6E9;}
+/***Search Bar****/
+
+body .we3-search-bar,
+body .we3-search-bar .we3-filter-bar{background:transparent;}
+body .we3-search-bar .we3-search-bar-container{max-width:none;width:100%;}
+body .we3-search-bar .we3-search-bar-container .we3-search-type,
+body .we3 *:not(i){border-radius:0 !important;font-family: GothamPro Light !important;font-weight:200 !important;}
+body .we3-search-bar .we3-search-bar-container .we3-search-type ul li{vertical-align:middle;height:42px;line-height:40px;}
+body .we3-search-bar .we3-search-bar-container .we3-search-type ul li.active{
+	color:#111;
+	
+}
+body .we3-search-bar .we3-search-bar-container .we3-omni-search .we3-loc-container{padding-bottom:0;padding-top:15px;padding-bottom:13px;}
+
+body .we3-search-bar .we3-search-bar-container .we3-omni-search .we3-loc-container.has-pills {
+  padding-top: 13px;
+  padding-bottom: 7px;
+}
+body.we3-page .we3-search-bar .we3-search-bar-container .we3-omni-search .we3-loc-container.has-pills{padding-top:13px;padding-bottom:7px;}
+body .we3-search-bar .we3-search-bar-container .we3-search-element{margin:0;margin-left:-3px;text-transform:uppercase;font-size:14px;}
+
+body .fixed .we3-search-bar .we3-search-bar-container .we3-search-element{height:auto;vertical-align:top;}
+body .we3-search-page.fixed .we3-filter-search-bar .we3-search-bar-container .we3-search-type .we3-listing-type{line-height:24px;}
+body .we3-search-bar .we3-search-bar-container .we3-omni-container{margin-left:-1px;margin-right:1px;}
+body .we3-search-bar .we3-search-bar-container .we3-search-element-container{margin-left:-2px;vertical-align:top;}
+body .we3-search-bar .we3-search-bar-container .we3-search-type ul li:hover{
+	background:#FCFCFC;
+	color:#111;
+}
+body .we3-search-bar .we3-search-bar-container .we3-search-dropdown{
+	background:#FFF;
+	color:#111;
+	height:50px;
+}
+body .we3-search-bar .we3-filter-bar{display:none;}
+body .we3-search-bar .we3-search-bar-container .we3-search-dropdown:hover{
+	background:#FCFCFC;
+}
+
+body .we3-search-bar .we3-search-bar-container .we3-search-dropdown label,
+body .we3-search-bar .we3-search-bar-container .we3-search-dropdown i,
+body .we3-search-bar .we3-search-bar-container .we3-omni-search .dropdown-icon-container i{
+	color:#111;
+	line-height:40px;
+}
+body .we3-search-bar .we3-search-bar-container .we3-omni-search .dropdown-icon-container i{
+	line-height:36px;
+	font-family: icomoon;
+}
+body .we3-search-bar .we3-search-bar-container .we3-omni-search .we3-loc-search-box.hidden{display:inline-block !important;}
+body .we3-search-page.fixed .we3-search-bar .we3-search-bar-container .we3-search-dropdown label,
+body .we3-search-page.fixed .we3-search-bar .we3-search-bar-container .we3-search-dropdown i,
+body .we3-search-page.fixed .we3-search-bar .we3-search-bar-container .we3-omni-search .dropdown-icon-container i{
+	color:#111;
+	line-height:20px;
+}
+
+body .we3-search-bar .we3-search-bar-container .we3-search-dropdown i{margin-left:18px;}
+.we3-search-bar .we3-search-bar-container .active .we3-search-dropdown i{margin-left:16px;}
+body .we3-search-bar .we3-refine-area .container{padding-bottom:5px;}
+body .we3-search-bar .we3-search-bar-container .we3-omni-search .search-icon-container i{
+	color:#333;
+	display:inline-block;
+	padding-top:6px;
+	padding-left:2px;
+}
+body .we3-search-bar .we3-search-bar-container .we3-omni-search input.we3-loc-search-box{font-size:14px;}
+::-webkit-input-placeholder {font-family: pn_light;color:#333;font-size:14px;line-height:20px;text-transform:uppercase;}
+:-moz-placeholder {font-family: pn_light; color:#333;font-size:14px;line-height:20px;text-transform:uppercase;}
+::-moz-placeholder {font-family: pn_light; color:#333;font-size:14px;line-height:20px;text-transform:uppercase;}
+:-ms-input-placeholder {font-family: pn_light; color:#333;font-size:14px;line-height:20px;text-transform:uppercase;}
+body .we3-search-bar .we3-search-button{
+	background:#05A6E9;
+	font-family: pn_light;
+	margin-top:-2px;
+	margin-left:-1px;
+	padding:9px 0px 8px 0px;
+	height:53px;
+}
+body .we3-search-page.fixed .we3-filter-search-bar .we3-search-bar-container .we3-search-button{
+	height:30px;
+}
+body .we3-search-bar .we3-search-bar-container .we3-search-button:hover{
+	background:#38bff4;
+}
+body ul.we3-filters li{
+	background:transparent;
+	border:1px solid #CCC;
+	color:#c4c4c4;
+	font-size:12px;
+	padding:3px 5px;
+	font-family: pn_light !important;
+	font-weight:200;
+}
+body .ui-autocomplete .ui-menu-item span.icon-container, .ui-autocomplete li span.icon-container{border-radius:50% !important;background:#05A6E9;}
+body .we3-search-bar .we3-filter-bar ul.we3-filters li:hover{background:#FCFCFC;color:#111;}
+body ul.we3-filters li.active{color:#111;}
+body .we3-search-bar .we3-filter-bar .we3-filter-bar-container label{color:#CCC;padding-right:10px;font-size:14px;}
+
+body .we3-search-bar .we3-filter-bar .we3-filter-bar-container .we3-filter-more span{background:#FFF;color:#111;font-size:12px; padding:3px 5px;}
+body .we3-search-bar .we3-filter-bar .we3-filter-bar-container .we3-filter-more span:hover{background:#FEFEFE;}
+body .we3-search-bar .we3-filter-bar ul.we3-filters{max-height:25px;}
+
+body .we3-search-bar .ui-slider-track.ui-mini .ui-slider-handle{border-radius: 50% !important;}
+
+body .we3-search-bar .we3-refine-area .we3-refine-content label{font-size:14px;}
+body .we3-search-bar .we3-refine-area .we3-refine-content ul.filter-options li{font-size:13px;text-transform:uppercase;color:#FFF;}
+body .we3-search-bar .we3-refine-area .we3-refine-content ul.filter-options li.active{background:#05A6E9;}
+
+
+
+/***Results Page****/
+body .we3 .search-results.listings .listings-section article.listing .time-info .days-ago{display:block;text-align:right;}
+body div.page.we3{margin-top:58px;max-width:none;width:100%;}
+body.we3-page .header .logo{max-width:60px !important;max-height:58px !important;}
+body.we3-page .logo img {
+  max-width: 100% !important;
+  height: auto;
+  padding-top: 7px;
+}
+body .we3-search-page .we3-search-bar-header{background:#141616;}
+body .we3-search-bar .we3-search-bar-container,
+body div.page.we3 .listing{max-width:1024px;margin:10px auto;}
+body .we3-search-bar .we3-search-bar-container{margin-bottom:0;}
+body .we3-search-page .we3-filter-search-bar .we3-search-bar-container .we3-search-type{height:50px;line-height:40px;background:#c1c1bd;}
+body .we3-search-page .we3-filter-search-bar .we3-search-bar-container .we3-search-type .we3-listing-type{color:#111;}
+body .we3-search-page .we3-filter-search-bar .we3-search-bar-container .we3-search-type i{margin-top:11px;}
+body .we3-search-page.fixed .we3-filter-search-bar .we3-search-bar-container .we3-search-type i{margin-top:2px;} 
+body .we3-search-page .we3-filter-search-bar .we3-search-bar-container #we3-alert-container{display:none;}
+body .we3-search-page .we3-filter-search-bar .we3-search-bar-container .search-icon-container{color:#FFF;line-height:50px;}
+body .we3-search-page .we3-search-results{max-width:1024px;margin:0 auto;}
+body .we3-search-page .we3-filter-search-bar .we3-search-bar-container .we3-omni-search .we3-loc-container{padding-left:100px;}
+body .we3-search-page.fixed .we3-filter-search-bar .we3-search-bar-container .we3-omni-search .we3-loc-container{padding-top:4px;}
+body .we3-search-page.fixed .we3-filter-search-bar .we3-search-bar-container .we3-omni-search .we3-loc-container.has-pills{padding-top:0;padding-bottom:1px;}
+body .we3-search-page.fixed .we3-filter-search-bar .we3-search-bar-container .we3-omni-search .we3-loc-container input.we3-loc-search-box{line-height:14px;}
+body .we3-search-page .we3-filter-search-bar .we3-refine-bar{background:#05A6E9;}
+body .we3-search-page .we3-filter-search-bar .we3-refine-bar .we3-search-element:hover{background:#38bff4;}
+body .we3-search-page .we3-filter-search-bar .we3-refine-bar .we3-search-element label{color:#F9F9F9;}
+body ul.we3-filters li:hover{background:#FFF;color:#000;}
+body .we3-search-page .we3-filter-search-bar .we3-refine-bar .we3-refine-area .we3-refine-content ul.filter-options li.active{background:#05A6E9;}
+body .we3-listing-page .listing-detail-main-info .building-profile{display:none;}
+body .we3-search-page .we3-filter-search-bar .we3-refine-bar .we3-search-element.we3-search-type{display:none;}
+body .we3-search-page.fixed .we3-filter-search-bar .we3-refine-bar .we3-search-element{padding-top:8px;}
+body .we3 .we3-user-profile-only{display:none !important;}
+body .we3-search-bar .we3-search-bar-container .we3-omni-search .we3-loc-container .we3-loc-pill{background:#05A6E9;color:#FFF;}
+body .we3-search-bar .we3-search-bar-container .we3-omni-search .we3-loc-container .we3-loc-pill i{color:#037faf;}
+body .we3-search-bar.show-mobile .we3-refine-area .we3-refine-content .we3-slider-container div.container,
+body .we3-search-bar .we3-refine-area .we3-refine-content .we3-slider-values div.container,
+body .we3-search-bar .we3-refine-area .we3-refine-content .we3-slider-container div.container{background:transparent;}
+
+/****Listings Page****/
+body .we3-listing-page .listing-detail-main-info .info-commercial-size .label{color:#5a5a5a;}
+body .we3-listing-page .listing-detail-main-info .info-commercial-size .value{font-weight:700;}
+body .we3 #list_realestate-detail-share{right:auto !important;}
+body .we3-listing-page .listing-detail-main-info .utility-button button:hover{background:#009dca;}
+body .we3-listing-page .listing-detail-main-info .utility-button button:active .label,
+body .we3-listing-page .listing-detail-main-info .utility-button button:hover .label,
+body .we3-listing-page .listing-detail-main-info .utility-button button:hover i{color:#FFF;}
+body .we3-listing-page .listing-detail-main-info .utility-button button{border-color:#009dca;}
+body .we3-listing-page .listing-detail-main-info .utility-button button .label,
+body .we3-listing-page .listing-detail-main-info .utility-button button i{color:#009dca;}
+body .we3-listing-page #contact-agent-section fieldset.captcha-section,
+body .we3 .agent #contact-agent-section fieldset.captcha-section
+{
+	display:none;
+}
+body .we3 .agent #contact-agent-section fieldset.contact-message textarea,
+body .we3-listing-page #contact-agent-section fieldset.contact-message textarea{
+	min-height:210px;
+}
+body .we3-listing-page #contact-agent-section fieldset.contact-info input, .we3-listing-page #contact-agent-section fieldset.contact-info label{
+    margin-bottom: 0px;
+}
+
+/***8Broker Page***/
+body.we3-brokerage .we3 .offices{display:none;}
+body div.page.we3-broker-page{max-width:1024px;margin-top:120px;}
+body .we3 .broker.static-area:first-of-type{display:none;}
+body .we3 .we3-sort-by-container .we3-sort-by{width:180px;}
+
+/***Agent Page***/
+body div.page.we3.we3-agent-page{max-width:1024px;margin:80px auto; 20px;}
+body .we3 .agent .agent-main-info .brokerage-thumbnail img{max-height:60px;}
+body .we3 .agent .agent-main-info .contact-agent-button{padding-bottom:2px;}
+body .we3 .agent #contact-agent-section fieldset.contact-info input, .we3 .agent #contact-agent-section fieldset.contact-info label{margin-bottom:0;}
+body .we3 .agent .agent-main-info .contact-agent-button span{line-height:29px;}
+body .we3 .agent .agent-main-info .contact-agent-button.call-agent .label{color:#009dca;}
+body .we3 .agent .agent-headshot .agent-thumbnail{background:#FFF;}
+
+@media (max-width: 1024px)  {
+	.search .searchForm{min-width:0;width:100%;}
+	
+}
+@media screen and (max-width: 921px){
+   body .we3-search-bar .we3-search-bar-container .we3-search-element{width:24.5%;}
+   body .we3-search-bar .we3-search-bar-container .we3-search-type ul{width:100%;}
+   body .we3-search-bar .we3-search-bar-container .we3-search-type ul li{width:48%;min-width:0;padding:4px 0;}
+   body .we3-search-bar .we3-search-bar-container .we3-search-element-container{margin-left:0;}
+   body .we3-search-bar .we3-search-bar-container .we3-search-element,
+   body .we3-search-bar .we3-search-button{margin-left:0px;min-width:100px;}
+   body .we3-search-bar .we3-search-bar-container .we3-search-type{min-width:180px;}
+}
+@media screen and (max-width: 667px){
+	body.we3-page .we3-search-bar.show-mobile, .we3-search-bar.we3-filter-search-bar.show-mobile{top:0px;padding-top:10px;}
+	body.we3-page .header .logo{margin-left:0px;}
+	.search .searchForm{position:initial;}
+	.search .searchForm h2{font-size:20px;padding-bottom:0;padding-top:10px;margin-bottom:0;}
+	body .we3-mobile-search-button {
+		margin-top:20px;
+	}
+	body .we3-search-bar.show-mobile .we3-search-bar-container .we3-search-type ul li{
+		width:49.3%;
+	}
+	body .we3-search-bar.show-mobile{
+		background: none rgba(39, 39, 39, 1);
+	}
+	
+	body .we3-search-bar .we3-search-bar-container .we3-search-element{height:auto;}
+	
+	body .we3-search-bar .we3-search-bar-container .we3-omni-search .dropdown-icon-container i{line-height:50px;}
+	body .we3-search-bar.show-mobile .we3-refine-area .we3-refine-content .we3-slider-container div.middle{width:72%;}
+	body .we3 .search-results.listings .listings-section{margin:5px;}
+	body .we3-mobile-refine-button ul li.create-alert{display:none;}
+	body .we3 .we3-search-results .we3-results-header h3.we3-main-results-header .we3-clear-results{display:none;}
+	::-webkit-input-placeholder {font-size:12px;}
+	:-moz-placeholder {font-size:12px;}
+	::-moz-placeholder {font-size:12px;}
+	:-ms-input-placeholder {font-size:12px;}
+	
+	body .we3-search-bar .we3-search-bar-container .we3-omni-search .dropdown-icon-container{margin-top:0;}
+	body .we3-listing-page .listing-detail-main-info .utility-button.share-listing-button{width:100%;}
+	body .we3-mobile-heading span.we3-mobile-close{top:5px;}
+	body .we3-search-page .we3-filter-search-bar .we3-search-bar-container .we3-search-type ul{position:relative;}
+	body .we3-search-page .we3-filter-search-bar.show-mobile.we3-filter-search-bar .we3-search-bar-container .we3-search-type ul li{
+		background:transparent;
+		color:#FFF;
+	}
+	
+	body .we3-search-page .we3-filter-search-bar.show-mobile .we3-search-bar-container .we3-search-type{
+		border:1px solid #FFF;
+		padding:3px;
+		height:auto;
+	}
+	body .we3-search-page .we3-filter-search-bar.show-mobile.we3-filter-search-bar .we3-search-bar-container .we3-search-type ul li.active{
+		background:#FFF;
+		color:#111;
+		opacity: 1;
+	}
+	body .we3-search-page .we3-filter-search-bar.show-mobile .we3-search-top .we3-search-element.we3-search-top-element{display:none;}
+	body .we3-search-page .we3-filter-search-bar.show-mobile .we3-refine-bar{background:transparent;}
+	body .we3-search-page .we3-filter-search-bar.show-mobile .we3-refine-bar .we3-search-element.we3-search-property-type{display:none;}
+	body .we3-search-page .we3-filter-search-bar.show-mobile .we3-search-bar-container .we3-omni-search{}
+	body .we3-listing-page #contact-agent-section fieldset.contact-message{padding-left:0;}
+	body .we3 .search-results.listings .listings-section article.listing .time-info .days-ago{display:inline-block;}
+	body .we3 .search-results.listings .listings-section article.listing .time-info{width:85%;}
+	body .we3-search-page .we3-filter-search-bar.show-mobile .we3-refine-bar .we3-refine-area .we3-refine-content ul.filter-options li.active{background: #05A6E9;}
+	
+	
+
+}
