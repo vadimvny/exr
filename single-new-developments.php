@@ -66,59 +66,7 @@
 			<hr>
         <?php } ?>  
          </div> <!-- article-container -->
-      
-        <?php
-        	$buildingID = get_field('exr_new_development_building');
-        	$we3Options = get_option('we3-real-estate');
-			$we3_building_api = $we3Options['search_api'] . '/search-results?source_namespace=' . $we3Options['name_space'].'&building='. $buildingID .'&sale_status=active&rp=999&sort='.urlencode('price desc');
-			//echo $we3_agent_api;
-			$result = json_decode(file_get_contents($we3_building_api));
-			$listings = $result->data;
-			if(!empty($buildingID) && strlen($buildingID)>1){
-		?>
-		<hr>
-        <h2>Availabilities</h2>
-		<ul class="new-dev-availabilities new-dev-side-section">
-		<?php
-			foreach($listings as $listing){
-		?>
-			<li class="building-listing Condo" itemscope="" itemtype="http://schema.org/Residence"> 
-			  <a class="overlay-link" href="/listing/<?=$listing->key?>/">	 
-						</a><div class="building-info headingHold"><a class="overlay-link" href="/listing/<?=$listing->key?>/">
-						</a><a href="/listing/WARBURG-SALES-1450297/harlem-ny-10039/" itemprop="url name">
-							<?=strtoupper($listing->address_2)?>
-						</a>
-						</div>
-						<div class="building-info priceHold" data-value="$500,000">
-							<div class="price"><?=$listing->price?></div>
-						</div>
-						<div class="building-info bd-info" data-value="1">
-							<span><?=$listing->bedrooms?></span> BD 
-						</div>
-						<div class="building-info  ba-info" data-value="1">
-							<span><?=$listing->baths?></span> BA
-						</div>
-						<div class="building-info  sq_ft" data-value="600">
-							<span><?=$listing->sq_ft?></span> FT<sup>2</sup>
-						</div>					
-			</li>
-		<?php
-			
-			}
-        ?>
-        </ul>
-       <?php }else{ 
-       
-       	$soldOut = get_field('exr_new_development_sold_out'); 
-		$soldOutDisplay = '';
-		if($soldOut=='sold-out'){	
-       ?>
-       	<hr>
-        <h2>Availabilities</h2>
-    	<div class="new-development-sold-out new-dev-side-section">
-				Sold Out
-		</div>
-       <?php } } ?>
+     
         </div>
 
     <div class="col-sm-5 margin-30  new-dev-sidebar">
@@ -188,8 +136,8 @@
 							<meta itemprop="url" content="/brokerage/<?=$agent->company[0]?>">
 						</div>
 
-<!-- 							<div class="email"><span class="number" itemprop="email"><a href="mailto:+<?=$agent->email?>"><?=$agent->email?></a></span></div>
- -->											
+							<div class="email"><span class="number" itemprop="email"><a href="tel:+<?=$agent->email?>"><?=$agent->email?></a></span></div>
+											
 						<!-- <div class="realtor-url"><a href="/agent/<?=$agent->key?>" class="agent-link">See my listings  ›</a></div>
 						<meta itemprop="url" content="/agent/<?=$agent->key?>"> -->
 					</div>
@@ -205,17 +153,237 @@
        </div><!--  container column --> 
      </div> <!--  container row -->     
 	</section> 
-	<section id="listing">    
-	    <div class="row">
+	<section id="listing" class="we3">    
+	    <div class="row search-results listings">
 	    	<div class="col-md-12">
+	    	<script id="listing-template" type="text/x-handlebars-template">
+					<article class="listing {{type}}" itemscope itemtype="http://schema.org/Residence"> 
+					  <a class="overlay-link" href="{{link}}">
+						  <header>
+							<h3>
+							<a href="{{link}}" itemprop="url name">
+								{{display_name}}
+							</a>
+							</h3>
+							<div class="utility-buttons">		
+										{{#if saved}}
+											<div class="utility-button save-listing-button we3-user-profile-only">
+												<button class="we3-listing-saved we3-user-save-listing disabled" data-listing-info="{{encodeListingInfo this}}" data-pub-type="listing.save" data-pub-data="{{key}}">
+												<i class="icon-home"></i><span class="status">Saved</span>
+												</button>
+											</div>
+										{{else}}
+						
+											<div class="utility-button hide-listing-button we3-user-profile-only">
+												{{#if hidden}}
+												<button class="we3-listing-hidden we3-user-hide-listing disabled" data-listing-info="{{encodeListingInfo this}}" data-pub-type="listing.hide" data-pub-data="{{key}}">
+													<i class="icon-close"></i><span class="status">Hidden</span>
+												</button>
+												{{else}}
+												<button class="we3-pub-user-action we3-user-save-listing" data-pub-type="listing.save" data-listing-info="{{encodeListingInfo this}}" data-pub-data="{{key}}">
+													<i class="icon-home"></i><span class="status">Save</span>
+												</button>
+												<button class="we3-pub-user-action we3-user-hide-listing" data-listing-info="{{encodeListingInfo this}}" data-pub-type="listing.hide" data-pub-data="{{key}}">
+													<i class="icon-close"></i><span class="status">Hide</span>
+												</button>
+												{{/if}}
+											</div>
+										{{/if}}
+
+							</div>
+							<div class="address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+										<div class="neighborhood" itemprop="addressLocality">
+											<a href="" class="follow">{{neighborhood}}</a>
+										</div>
+				  
+									<div class="neighborhood" itemprop="addressLocality">
+										<a href="{{link}}" class="follow">
+											{{city}}
+										</a>
+									</div>
+
+									<div class="state" itemprop="addressRegion">
+										<a href="{{link}}" class="follow">
+											{{state}}
+										</a>
+									</div>
+									<div class="zip" itemprop="postalCode">
+										<a href="{{link}}" class="follow">
+											{{zip}}
+										</a>
+									</div>
+								<div class="sl sl1">		      
+								</div>
+							</div>
+						  </header>
+							<div class="pic">
+								<img itemprop="photo" src="{{main_photo}}">
+								<div class="sale_status" data-value="{{sale_status}}">
+										{{sale_status}}
+								</div>
+							</div>
+							<div class="trendingBanner">&nbsp;</div>
+							<div class="info-wrapper">
+								<div class="priceHold" data-value="{{price}}">
+									<div class="price">{{price}}</div>
+								</div>
+								<div class="bd-ba-Hold">
+									<div class="info bd-info" data-value="{{bedrooms}}">
+										<span>{{bedrooms}}</span> BD 
+									</div>
+									<div class="info ba-info" data-value="{{baths}}">
+										<span>{{baths}}</span> BA
+									</div>				
+								</div>
+								<div class="type" data-value="{{type}}">
+										{{type}}
+									</div>
+								<div class="time-info" data-value="{{modified_date_formatted}}">
+									<div class="days-ago">Added: {{created_date_formatted}}</div>
+									<div class="days-ago">Updated: {{modified_date_formatted}}</div>
+								</div>
+							</div>
+							{{openhouseHTML}}      
+						  <div class="meta">
+						  </div>
+						</a>
+					  <div class="clearme"> &nbsp;</div>
+					</article>
+				</script>
 	    		<h2>Listings</h2>
-	    		
+				<?php
+					$buildingID = get_field('exr_new_development_building');
+					$we3Options = get_option('we3-real-estate');
+					//print_r($we3Options);
+					$sort = $we3Options['default_sort'];
+									
+					$sortTypes = array(
+
+								'listing_date desc' => 'Recently Added',
+								'modified_date desc' => 'Recently Updated',
+								'price desc' => 'Price - High',
+								'price asc' => 'Price - Low',
+								'bedrooms desc' => 'Beds - Most',
+								'bedrooms asc' =>'Beds - Least'
+					);
+					
+				?>	
+					<div class="building listings listings-section">
+						<div class="we3-sort-by-container">
+							<div class="we3-search-dropdown we3-sort-by">
+								<label class="we3-selected-sort"><?=$sortTypes[$sort]?></label>
+								<i class="icon-arrow-down7"></i>
+								<div class="we3-sorty-options">
+									<ul>
+										<?php foreach($sortTypes as $skey => $sval){ ?>
+											<li data-sort-by="<?=$skey?>">
+												<?=$sval?>
+											</li>
+										<?php } ?>
+									</ul>
+								</div>
+							</div>
+
+						</div>
+						<div class="we3-listings-filters">
+							<ul>
+								<li data-sale-status="available" class="active">Available</li>
+								<li data-sale-status="app pending" >In Contract</li>
+							</ul>
+						</div>
+						<div id="building-availabilities-sale">
+						
+							
+							<div id="building-sales" class="listings-section">
+								
+								<?php
+									$query = array( 'building' => $buildingID, 'sale_status' => $we3Options['sale_status'], 'sort' => 'price desc', 'source_namespace' =>  $we3Options['name_space'] );
+								?>		
+						
+							</div> 
+						</div>
+						<script>
+							jQuery(document).ready(function() {
+								var listingQuery = <?=json_encode($query)?>; 
+								var source   = jQuery("#listing-template").html();
+								var listingTemplate = Handlebars.compile(source);
+								 Handlebars.registerHelper('encodeListingInfo', function(l){
+								  var info = {};
+								  info.key = l.key;
+								  info.neighborhood = l.neighborhood;
+								  info.property_category = l.property_category;
+								  info.city = l.city;
+								  info.state = l.state;
+								  info.zip = l.zip;
+								  info.price = l.price;
+								  info.display_name = l.display_name;
+								  info.photoCount = l.photo_count;
+								  info.property_featrues = l.property_features;
+								  info.year_built = l.year_built;
+								  info.display_publicly = l.display_publicly;
+								  info.baths = l.baths;
+								  info.bedrooms = l.bedrooms;
+								  info.sq_ft = l.sq_ft;
+								  info.type = l.type;
+								  var string = encodeURI(JSON.stringify(info));
+								  return new Handlebars.SafeString(string);
+							  });
+
+
+								var we3WidgetSearch = jQuery('#building-sales').we3Search({
+									template: listingTemplate,
+									saveQuery: false,
+									onComplete: function(response){
+										//console.log(response.count);
+										if(response.count > 0 ){
+											jQuery('#building-availabilities-sale').show();
+				
+										}
+									}
+								});
+								we3WidgetSearch.doSearch(listingQuery);
+									 
+								jQuery(document).on('click','.we3-sort-by', function(event, ui){
+									if(jQuery('.we3-sorty-options').hasClass('active')){
+										jQuery('.we3-sorty-options').removeClass('active');
+									}else{
+										jQuery('.we3-sorty-options').addClass('active')
+									}
+									var sortBy = jQuery(event.target).data('sortBy');
+
+									if(typeof sortBy !== 'undefined'){
+										listingQuery.sort = sortBy;
+										listingQuery.pg = 1;
+										we3WidgetSearch.doSearch(listingQuery);
+										jQuery('.we3-selected-sort').text(jQuery(event.target).text());
+									}
+								});
+							
+								jQuery(document).on('click', '.we3-listings-filters li', function(event, ui){
+									var saleStatus = jQuery(this).data('saleStatus');
+									
+									listingQuery.sale_status = [ saleStatus ];
+									
+									listingQuery.pg = 1;
+								
+									we3WidgetSearch.doSearch(listingQuery);
+									jQuery('.we3-listings-filters li').removeClass('active');
+									jQuery(this).addClass('active');
+								
+								});
+
+							});
+						
+
+						</script>
+						
+					</div>
 	    	</div> <!-- container column -->
 	    </div> <!-- container row -->	
 	  </div>
     </div>
   </div> 
-	   </section> 
+  </section> 
 		<div id="willimsburg">
 		 <div class="row">
     		<div class="col-md-12">

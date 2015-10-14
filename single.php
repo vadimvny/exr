@@ -303,7 +303,7 @@ get_header();
 						
 											</div>
 											
-											<button class="we3-more-link">More Listings</button>
+											<button class="we3-more-link">More Listings</button> 
 										</div>
 										<script>
 											jQuery(document).ready(function() {

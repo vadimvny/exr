@@ -2,7 +2,7 @@
 
 class EXR_Theme 
 {
-    
+     
     static private $self = null;
     
     static public $newDevAgentCount = 3;
@@ -21,7 +21,14 @@ class EXR_Theme
     protected function initActions()
     {
         add_action('init', array($this, 'registerMenus'));
+        wp_enqueue_style( 'we3-search-styles', plugin_dir_url().'/we3-real-estate/modules/search/css/we3-search.css', array(), '1.0.2' );
         wp_enqueue_style( 'we3-custom',  get_template_directory_uri() . '/we3-custom.css', array(), '1.0.0' );
+ 
+		wp_enqueue_script('we3-search-script', plugin_dir_url().'/we3-real-estate/modules/search/js/we3-searchv2.js', array(), '1.0.0');
+		wp_enqueue_script('we3-jquery-number-script', plugin_dir_url().'/we3-real-estate/modules/search/js/jquery.number.min.js');
+		
+		wp_enqueue_script('we3-handlebars-script', plugins_url() . '/we3-real-estate/js/handlebars.js');
+					
     }
     
     /** actions **/
@@ -84,6 +91,36 @@ class EXR_Theme
 				array(self::$self, 'exr_new_development_meta_box_callback'),
 				'new-developments'
 			);
+	}
+	public function exr_print_building_select($name, $value){
+
+			if ( false === ( $agents = get_transient( 'exr_buildings' ) ) || true ) {
+				$we3Options = get_option('we3-real-estate');
+				$we3_agent_api = $we3Options['search_api'] . '/search-results?source_namespace=' . $we3Options['name_space']. '&rp=999&sort='.urlencode('full_street_address asc');
+				//echo $we3_agent_api;
+				$result = json_decode(file_get_contents($we3_agent_api));
+				$buildings = $result->data;
+				set_transient( 'exr_buildings', $agents, 60 * MINUTE_IN_SECONDS );
+			}
+		
+			$buildingArray = array();
+			foreach($buildings as $building){
+				if(!empty($building->building)){
+					$buildingArray[$building->building] = $building->full_street_address . ', '. $building->city . ', '. $building->state . ' '. $building->zip;
+				}
+			}
+		
+			echo '<select id="'. $name . '" name="'.$name.'">';
+			echo    '<option value="">--Not Selected--</option>';
+			foreach($buildingArray as $key => $building){
+				$selected = '';
+				if($value == $key){
+					$selected = ' selected';
+				}
+				echo '<option value="' . $key . '" '. $selected . '>'.ucwords($building).'</option>';
+			}
+			echo '</select>';
+
 	}
 
 	public static function exr_print_agent_select($name, $value){
@@ -159,7 +196,11 @@ class EXR_Theme
 			$buildingField = 'exr_new_development_building';
 			$building = get_post_meta( $post->ID, $buildingField , true );
 		
-			
+			echo '<p><label for="'.$buildingField.'">';
+			_e( 'Select Building with Active Listings to Associate with this New Development ', 'warburg_new_development_textdomain' );
+			echo '</label></p> ';
+			self::exr_print_building_select($buildingField, $building);
+		
 		
 			echo '<p><label for="exr_new_development_agent">';
 			_e( 'Choose Up to '.self::$newDevAgentCount.' Agents Representing this  New Development: ', 'exr_new_development_textdomain' );
