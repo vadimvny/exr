@@ -35,11 +35,13 @@ get_header();
 		<section id="mission">
 			<div class="row"> 			
  				<h2>Mission</h2>
-					<div class="col-md-5">
+					<div class="col-md-7">
 						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/ui/img/mission.png" alt="mission" />
 					</div>
-					<div class="col-md-7">
+					<div class="col-md-5">
+            <div class="about-content">
 						  <?php the_content(); ?>
+            </div>  
 					</div>	
 				</div>	
 		</section>
@@ -48,14 +50,16 @@ get_header();
 			<h2>Brand</h2>
 				<div class="col-md-12">
 					<div class="text-container">
-            <?php the_content(); ?>
-				</div> <!-- text-container end -->
-			
+             <p> We are used to live in a three dimensional world: up and down, left and right, forwards and backwards, these are the only ways to move. </p>
+
+             <p>But in topology they formulated, and even represented, a fourth dimension. Common three dimensional polygons, like a pyramid or a cube, can be transposed in a four dimensional space.In some places we can experience a fourth dimension. When the place becomes more than the sum of its parts. It’s no longer just measures and angles, square meters and rooms. The three usual dimensions merge to let a fourth dimension rise from them. </p>
+
+             <p>When four walls become an house, that’s when we are experiencing it, the fourth dimension. </p>
+				  </div> <!-- text-container end -->
 					<div class="symbol-container">
 						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/ui/img/symbol.png" alt="symbol" />"
 					</div>
-			
-			</div>
+			  </div>
 		</section>	
 			<section id="team">
 				
@@ -118,8 +122,7 @@ get_header();
 							</div>		
 				 	</div>
 				 </div>	
-				 </div> 
-       </div>  
+				</div> 
 			</section>	
 		<section id="history">
 			<div class="scrollme">

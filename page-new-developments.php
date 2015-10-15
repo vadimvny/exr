@@ -94,7 +94,7 @@ get_header(); ?>
 				<div class="col-md-6">
 					<!-- <div class="listing-info"> -->
 					<div class="listing-data">	
-						<h3><?=$new_dev_post->post_title?></h3>
+						<h3><a href="<?php echo get_permalink( $new_dev_post->ID ); ?>"><?=$new_dev_post->post_title?></a></h3>
 		
 						<?=$soldOutDisplay?>
 						<div class="excerpt">
