@@ -169,6 +169,7 @@ jQuery('.about .inner-btn, .next, .about .nav ul li a').click(function() {
 	        jQuery('.nav a:first').addClass('active');
 	    }
 	});
+
 }); //-->end document.ready
 
 

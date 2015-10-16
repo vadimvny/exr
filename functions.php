@@ -132,7 +132,7 @@ class EXR_Theme
 			$result = json_decode(file_get_contents($we3_agent_api));
 			$agents = $result->data;
 			set_transient( 'exr_agents', $agents, 60 * MINUTE_IN_SECONDS );
-		}
+		}	
 		
 		echo '<select id="'. $name . '" name="'.$name.'">';
 		echo    '<option value="">--Not Selected--</option>';

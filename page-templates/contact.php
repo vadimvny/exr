@@ -23,7 +23,7 @@ get_header();
                     <div class="contactData">
                         <div class="dataItem email">
                         	<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/ui/img/mail@2x.png" alt="email" />
-                			<span>hello@exrny.com</span>	
+                			<span><a href="mailto:hello@exrny.com">hello@exrny.com</a></span>	
                 		</div>
                         <div class="dataItem phone">
                 			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/ui/img/phone@2x.png" alt="email" />

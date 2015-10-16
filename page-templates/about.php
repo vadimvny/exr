@@ -128,6 +128,15 @@ get_header();
 			<div class="scrollme">
 			 <div class="row">	
 			<h2>History</h2>
+      <div
+        class="animateme"
+        data-when="enter"
+        data-from="0.5"
+        data-to="0"
+        data-opacity="0"
+        data-translatex="200"
+        data-rotatez="90"
+    >
       <div class="timeline-container">
         <ul class="timeline">
           <li>
@@ -295,6 +304,7 @@ get_header();
   </li>
    </ul> 
 </div><!-- container end -->
+</div><!--  timeline-container end -->
   			</div><!-- animate -->
   		</div><!-- scroll -->
   		</section>	

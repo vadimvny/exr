@@ -106,6 +106,7 @@ a {
     margin: 0 auto;
         white-space: nowrap;
 }
+
 .headerImage {
     background: black;
     background-size: auto 100%;
@@ -113,7 +114,7 @@ a {
     text-align: center;
     position: relative;
     bottom: 20px;
-    height: 374px;
+    height: 380px;
 }
 
 .headerImage.terms {
@@ -514,7 +515,7 @@ ABOUT PAGE
 
 .navigation.desktopOnly > li:hover > a {
     color: #DEDEDE;
-/*    border-bottom: 2px solid #47B3AE;
+/*    border-bottom: 2px solid #2bb4ae;
     bottom: 24px;*/
 }
 
@@ -905,15 +906,22 @@ a.footer-social {
     padding-top: 40px;
     padding-bottom: 20px;
 }
+
 .contactForm .contactData {
     text-align: left;
-    margin-top: 42px;
-    /* padding: 10px; */
+    margin-top: 40px;
     float: right;
+    position: relative;
+    left: 17px;
+}
+
+.contactForm .map-container {
+    position: relative;
+    top: 6px;
 }
 .contactForm .contactData .dataItem {
     /* margin-left: 10px; */
-    margin-bottom: 25px;
+    margin-bottom: 18px;
     position: relative;
     vertical-align: top;
     white-space: nowrap;
@@ -921,14 +929,14 @@ a.footer-social {
     font-size: 16px;
     color: #6B6B6B;
 }
+
 .map-container .map {
-    width: 453px;
-    /* margin-left: 36px; */
+    width: 442px;
     margin-top: 5px;
-    height: 534px;
+    height: 497px;
     background-repeat: no-repeat;
     background-size: cover;
-    float: right;
+    margin-left: 7px;
 }
 
 .contactForm .contactData .email img {
@@ -941,10 +949,32 @@ a.footer-social {
 .contactForm .contactData .dataItem * {
     vertical-align: top;
     color: #6B6B6B;
-    font-family: GothamPro Light;
+    font-family: GothamPro Regular;
     text-decoration: none;
 }
 
+.page-template-contact .headerImage h1 {
+    font-family: GothamPro Light, san-serif;
+    font-size: 60px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 0;
+    height: 0;
+}
+
+.page-template-contact .staticContent {
+    padding-top: 5px;
+}
+
+.page-template-contact .staticContent p {
+    color: #1D2029;
+    line-height: 24px;
+}
+
+div.wpcf7 {
+    margin-top: 25px !important;
+}
 
 .contactForm .contactData .dataItem:before {
     content: '';
@@ -980,47 +1010,49 @@ a.footer-social {
     padding-top: 0 !important;
 }
 
-.contactForm form .textField, #wpcf7-f99-p54-o1 .wpcf7-text, #wpcf7-f99-p54-o1 .wpcf7-select  {
-    width:100%;
-    height: 38px;
+.contactForm form .textField, #wpcf7-f99-p54-o1 .wpcf7-text, #wpcf7-f99-p54-o1 .wpcf7-select {
+    width: 512px;
+    height: 50px;
     padding: 8px 10px;
     font-size: 0.9em;
     margin-bottom: 15px;
 }
+
 #wpcf7-f99-p54-o1 .wpcf7-text, #wpcf7-f99-p54-o1 .wpcf7-select {
     width:auto;
 }
 
 .contactForm form .textField, .contactForm form .message, #wpcf7-f99-p54-o1 .wpcf7-text, #wpcf7-f99-p54-o1 textarea, #wpcf7-f99-p54-o1 .wpcf7-select {
     border: 2px solid #ecedee;
-    border-radius: 2px;
+    padding-left: 27px;
 }
+
 .contactForm form .message {
-    width: 100%;
-    float: right;
-    padding: 10px;
+    width: 512px;
     line-height: 1.2em;
     font-size: 0.9em;
     height: 140px;
     resize: none;
-    padding: 3px 0px 348px 9px;
+    padding: 14px 0px 218px 26px;
     overflow: hidden;
 }
 
 .contactForm form input[type="submit"], #wpcf7-f99-p54-o1 input[type="submit"] {
-    width: 100%;
-    height: 48px;
+    width: 512px;
+    height: 50px;
     color: #fff;
-    background-color: #3BB4AE;
+    background-color: #2bb4ae;
     border: 0px;
-    font-size: 1.2em;
-    /* text-transform: uppercase; */
-    margin-top: 4px;
-    font-size: 13px;
-    font-weight: 600;
-    font-family: GothamPro Regular;
+    font-size: 14px;
+    font-family: GothamPro Medium; 
+    position: relative;
+    bottom: 25px;
 }
 
+
+.contactForm form input[type="submit"]:hover, #wpcf7-f99-p54-o1 input[type="submit"]:hover {
+    background: #228889 !important;
+}
 .page-template-contact .footer {
     height: 38px;
     position: relative;
@@ -1028,8 +1060,19 @@ a.footer-social {
     bottom: 0;
     overflow: hidden;
     width: 100%;
-    top: 109px;
+    top: 12px;
     /*background: rgba(48, 48, 47, 0.9);*/
+}
+
+.page-template-contact .header {
+    height: 72px;
+    position: relative; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    border-bottom: 1px solid rgba(151, 156, 154, .48);
+    background-color: black;
 }
 
 .page-template-contact .navigation.footer-nav li a {
@@ -1038,11 +1081,8 @@ a.footer-social {
     color: #6b6b6b;
     text-decoration: none;
     border-top: 3px solid transparent;
-    font-family: GothamPro Light;
-    font-weight: 600;
+    font-weight: 200;
 }
-
-
 .page-template-contact span.desktopOnly {
     padding-left: 72px;
     font-size: 11px;
@@ -1066,7 +1106,37 @@ a.footer-social {
     color: #9A9A9A !important;
 }
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+
 /*************Mobile Contact *******************/
+
+@media (max-width: 1024px) {
+    .contactForm form .textField, #wpcf7-f99-p54-o1 .wpcf7-text, #wpcf7-f99-p54-o1 .wpcf7-select {
+        width: 100%;
+    }
+    .contactForm form .message {
+        width: 100% !important;
+    }
+    .contactForm form input[type="submit"], #wpcf7-f99-p54-o1 input[type="submit"] {
+        width: 100% !important;
+    }
+
+    .contactForm .contactData {
+        left: 0;
+    }
+
+    input, textarea {
+        -webkit-appearance: none;
+        border-radius: 0;
+    }
+
+}
 
 @media (max-width: 996px) {
     .contactForm {
@@ -1090,7 +1160,28 @@ a.footer-social {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
+    .contactForm .contactData {
+        margin-top: 8px;
+    }
+    .page-template-contact .headerImage {
+        height: 200px;
+    }
+
+    .page-template-contact .headerImage h1 {
+        font-size: 1.2em;
+         top: 10%;
+    }
+
+    input, textarea {
+        -webkit-appearance: none;
+        border-radius: 0;
+    }
+
+    .contactForm h2 {
+        padding-top: 25px !important;
+    }
+
     .contactForm .contactData .dataItem:before {
         content: '';
         display: inline-block;
@@ -1098,15 +1189,29 @@ a.footer-social {
         width: 0;
         /* background: url(../img/mail@2x.png) 0 0 no-repeat; */
     }
+    .contactForm .contactData {
+        left: 0; 
+    }
+
+    .contactForm form .message {
+        padding: 14px 0px 165px 26px;
+    }
 
     .contactForm .contactData .dataItem {
         margin-left: 0; 
+        white-space: normal;
+        padding-bottom: 10px;
     }
 
     .contactForm .contactData .dataItem {
-        font-size: 0.7em !important; 
+        font-size: 1.0em !important; 
     }
     
+    .dataItem.location span {
+        width: 215px;
+        display: inline-block;
+    }
+
     .page-template-contact .staticContent {
         padding-left: 0 !important; 
         padding-right: 0 !important;     
@@ -1119,13 +1224,34 @@ a.footer-social {
       margin: 10px auto 0;
     }
     .page-template-contact .footer {
-    height: 38px;
-    position: relative;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
-    width: 100%;
-    top: 0; 
+        height: 38px;
+        position: relative;
+        left: 0;
+        bottom: 0;
+        overflow: hidden;
+        width: 100%;
+        top: 0; 
+    }
+
+   .contactForm .contactData .dataItem span {
+      -ms-word-break: break-all;
+      word-break: break-all;
+
+      /* Non standard for webkit */
+      word-break: break-word;
+
+      -webkit-hyphens: auto;
+      -moz-hyphens: auto;
+      hyphens: auto;
+    }
+    .contactForm span.wpcf7-not-valid-tip {
+        font-size: .8em !important;
+        width: 50% !important;
+        left: 0 !important; 
+    }
+    
+    .header .logo img {
+        margin-left: 15px !important;
     }
 }
 
@@ -1519,7 +1645,7 @@ a.footer-social {
     margin-left: auto;
     bottom: 45%;
     visibility: hidden;
-    background-color: #47B3AE;
+    background-color: #2bb4ae;
     -webkit-transition: all .1s ease;
     transition: all 0.3s ease;
     -webkit-transform: scaleX(0);
@@ -1558,7 +1684,7 @@ a.footer-social {
 }
 
 .we3-search-bar .we3-search-bar-container .we3-search-button:hover {
-    background: #47B3AE !important;
+    background: #2bb4ae !important;
 }
 
 .we3-search-page .we3-filter-search-bar .we3-refine-bar .we3-search-element i {
@@ -1571,11 +1697,11 @@ a.footer-social {
 
 
 .we3-search-page .we3-filter-search-bar .we3-refine-bar {
-    background: #47B3AE !important;
+    background: #2bb4ae !important;
 }
 
 .we3-search-page .we3-filter-search-bar .we3-refine-bar .we3-search-element:hover {
-    background: #47B3AE !important;
+    background: #2bb4ae !important;
 }
 
 .we3 .we3-search-results .we3-search-dropdown i {
@@ -1807,49 +1933,6 @@ ul.share-button li.reddit i{ color:#000000; font-family: "icomoon";}
 .we3-search-bar .we3-search-bar-container, body div.page.we3 .listing {
     max-width: 1024px;
     margin: 14px auto !important;
-}
-/*******************************Agents*******************/
-.we3 .broker .agents-section article.agent {
-    display: inline-block;
-    width: 23% !important;
-    margin-right: 1%;
-    vertical-align: top;
-    background: none !important; 
-    box-shadow: none;
-    overflow: hidden;
-    border-radius: 4px;
-    margin-bottom: 10px;
-    position: relative;
-    min-height: 438px !important;
-}
-
-.we3 .broker .agents-section article.agent .agent-thumbnail {
-    margin: 5px;
-    position: relative !important; 
-    display: inline-block;
-    width: 237px !important;
-    height: 268px !important;
-    text-align: center;
-    vertical-align: top;
-    border-radius: 50%;
-    background: #FFF !important;
-    padding-top: 0px;
-    overflow: hidden;
-}
-
-.we3 .broker .agents-section article.agent .agent-info {
-    
-    text-align: center;
-    margin: 37px 0 0 0 !important;
-}
-
-.we3 .static-area {
-    border: none !important; 
-}
-
-.home.blog.logged-in.admin-bar.we3-real-estate.we3-brokerage.we3-page.customize-support 
-.container {
-    background: none !important;
 }
 
 
@@ -3563,4 +3646,144 @@ body .we3-search-bar .we3-search-bar-container .we3-search-type ul li {
 
 #we3-search-agent-bar {
     display: none !important;
+}
+
+/******************AGENTS PAGE*********************/
+
+@media (min-width: 1024px) {
+    .we3 .broker .agents-section article.agent {
+        display: inline-block;
+        width: 23% !important;
+        margin-right: 1%;
+        vertical-align: top;
+        background: none !important; 
+        box-shadow: none;
+        overflow: hidden;
+        border-radius: 4px;
+        margin-bottom: 10px;
+        position: relative;
+        min-height: 438px !important;
+    }
+
+    .we3 .broker .agents-section article.agent .agent-thumbnail {
+        margin: 5px;
+        position: relative !important; 
+        display: inline-block;
+        width: 240px !important;
+        height: 280px !important;
+        text-align: center;
+        vertical-align: top;
+        border-radius: 50%;
+        background: #FFF !important;
+        padding-top: 0px;
+        overflow: hidden;
+    }
+
+    .we3 .broker .agents-section article.agent .agent-info {
+        
+        text-align: center;
+        margin: 37px 0 0 0 !important;
+    }
+
+    .we3 .static-area {
+        border: none !important; 
+    }
+
+    .home.blog.logged-in.admin-bar.we3-real-estate.we3-brokerage.we3-page.customize-support 
+    .container {
+        background: none !important;
+    }
+       
+    .we3-brokerage .headerImage h1 {
+        font-family: GothamPro Light, san-serif;
+        font-size: 60px;
+        position: relative;
+        height: auto !important;
+        top: 50%;
+        transform: translateY(-50%);
+    }    
+    
+    .we3-brokerage .headerImage h2 {
+        text-align: center;
+        position: relative;
+        height: auto;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 767px;
+        margin: 0 auto;
+        bottom: 152px;
+    }
+}
+
+@media (max-width: 600px) {
+    .we3-brokerage .headerImage h1 {
+        font-size: 1.2em !important;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        hyphens: auto;
+    }
+    .we3-brokerage .headerImage h2 {
+        top: 56%;
+        position: absolute;
+        line-height: 20px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .we3-brokerage .headerImage h1 {
+        font-size: .6em !important;
+    }
+    .we3-brokerage .headerImage h2 {
+        top: 56%;
+        position: absolute;
+        line-height: 20px;
+        width: 100%;
+        font-size: .4em;
+    }
+}
+
+.we3 .broker .main-section .title {
+  display: none !important;
+}
+
+.we3 .agents-holder .we3-results-header {
+    display: none !important;
+}
+
+.we3 .broker .agents-section article.agent .agent-info .agent-name {
+    position: relative;
+    bottom: 5px;
+}
+
+.agent-info .agent-name {
+    color: #000000 !important;
+}
+
+.agent-info .agent-title {
+    color: #6b6b6b !important;
+}
+
+.agent-title.agent-office {
+    text-transform: uppercase;
+}
+
+.we3 .agents-holder .we3-pagination {
+    display: none;
+}
+
+.we3 .footer .copy {
+    color: #6b6b6b !important;
+}
+
+/*******************AGENT MOBILE******************/
+
+@media (max-width: 480px) {   
+
+    .we3 .broker .agents-section article.agent {
+        width: 100% !important;
+    }
 }
