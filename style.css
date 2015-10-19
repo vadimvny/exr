@@ -20,9 +20,9 @@ body, home {
 }
 
 .mobileOnly .current-menu-item > a {
-    border-top:none;
+    border-top: none;
     color: #d2d2d2;
-    border-bottom: 3px solid #05a6e9;
+    border-bottom: 3px solid #2bb4ae;
 }
 
 .sub-menu .current-menu-item > a {
@@ -426,6 +426,7 @@ span.wpcf7-not-valid-tip {
         margin-left: 39px;
         margin-top: 8px;
     }    
+   
    .header {
         height: 72px;
         position: absolute;
@@ -433,6 +434,7 @@ span.wpcf7-not-valid-tip {
         top: 0;
         width: 100%;
         border-bottom: 1px solid rgba(151, 156, 154, .48);
+        background-color: #000;
     }
     .about #mission p {
         /* float: right; */
@@ -494,7 +496,7 @@ span.wpcf7-not-valid-tip {
 @media (max-width: 480px) {
     .headerImage h1 {
         font-family: GothamPro Light, san-serif;
-        font-size: 1.1em;
+        font-size: .8em !important;
         line-height: 388px;
         height: 220px;
     }
@@ -588,3 +590,30 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
     outline: -webkit-focus-ring-color auto 0px;
 }
 
+.we3-listing-page header .listing-address {
+    font-family: GothamPro Light !important;
+}
+
+.we3-listing-page .info-section h5, .we3-listing-page .info-section .description-header {
+   font-family: GothamPro Light !important;
+}
+
+.we3 .we3-search-results .top-pagination.we3-pagination ul li.active span {
+    color: #A6B4B7 !important;
+}
+
+div.page.we3.we3-agent-page {
+    max-width: 1024px;
+    margin: 94px auto 30px auto !important;
+}
+
+.footer {
+    height: 28px;
+    position: relative;
+    left: 0;
+    bottom: 10px;
+    overflow: hidden;
+    width: 100%;
+    z-index: 2;
+    /* margin-top: -36px; */
+}

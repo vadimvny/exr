@@ -99,6 +99,10 @@ a {
     border-bottom: 1px solid rgba(151, 156, 154, .48);
 }
 
+.blog .header {
+    background-color: #000;
+}
+
 
 .header .logo {
     /*display: block;*/
@@ -298,9 +302,6 @@ ABOUT PAGE
   opacity: .5;
 }
 
-#history {
-   margin: 0 auto;
-}
 .about #team .name {
     position: relative;
     bottom: 0;
@@ -597,7 +598,6 @@ ABOUT PAGE
     text-decoration: none;
     border-top: 3px solid transparent;
     font-family: GothamPro Light;
-    font-weight: 600;
 }
 
 .home .navigation.footer-nav li a {
@@ -606,7 +606,6 @@ ABOUT PAGE
     text-decoration: none;
     border-top: 3px solid transparent;
     font-family: GothamPro Regular;
-    font-weight: 600;
 }
 
 .navigation.footer-nav > li:hover > a {
@@ -1285,7 +1284,7 @@ button:focus {
     margin: -110px auto 0;
     width: 60%;
     min-width: 1024px;
-    padding: 10px 0 0px 0;
+    padding: 10px 0 20px 0;
 }
 .search .searchForm h2 {
     font-size: 50px;
@@ -1484,11 +1483,11 @@ button:focus {
 }
 
 .staticContent h3 {
-    font-size: 2em;
-    color: #05a6e9;
+    font-size: 20px;
+    color: #000;
     font-weight: normal;
-    padding-bottom: 20px;
-    font-family: pn_light, san-serif;
+    padding-top: 16px;
+    padding-bottom: 32px;
 }
 .staticContent p {
     padding-bottom: 10px;
@@ -1511,13 +1510,9 @@ button:focus {
 /******************Commercial Page Mobile ********/
 
 @media (max-width: 480px) {
-    .search .searchForm .contacts .contactItem {
-        background: none !important;
-        font-size: .8em !important;
-        padding-left: 0 !important;
-    }
     .contacts img {
         width: 18px !important;
+        margin-right: 10px;
     }
     
     .we3.we3-mobile-search-button.we3-mobile-trigger span {
@@ -1724,7 +1719,7 @@ button:focus {
 .we3-mobile-refine-button ul li {
     display: table-cell;
     list-type-style: none;
-    background: #51B3AE !important;
+    background: #2bb4ae !important;
     font-size: 16px;
     color: #FFF;
     padding: 8px 3px;
@@ -1746,10 +1741,10 @@ button:focus {
 .we3 .we3-search-results .we3-results-header h3.we3-main-results-header .we3-clear-results,
 .we3 .search-results.listings .listings-section article.listing .price
 {
-    color: #51B3AE !important;
+    color: #2bb4ae !important;
 } 
 .we3 .search-results.listings .listings-section article.listing:hover {
-    border-color: #51B3AE !important;
+    border-color: #2bb4ae !important;
 }
 
 .home.blog.we3-real-estate.we3-search.we3-page .footer {
@@ -1766,7 +1761,7 @@ button:focus {
 
 .ui-autocomplete .ui-menu-item span.icon-container, .ui-autocomplete li span.icon-container {
     border-radius: 50% !important;
-    background: #51B3AE !important;
+    background: #2bb4ae !important;
 }
 
 .we3-search-page .we3-filter-search-bar .we3-search-bar-container .we3-search-type {
@@ -1784,11 +1779,7 @@ button:focus {
     background: none !important;
     color: #9A9A9A !important;
 }
-
-.we3-search-page .we3-filter-search-bar.we3-filter-search-bar .we3-search-bar-container .we3-search-type ul li.active {
-    background: none !important;
-}
-
+    
 .we3-search-page .we3-filter-search-bar.we3-filter-search-bar .we3-search-bar-container .we3-search-type ul li {
     text-align: left;
     color: #000 !important;
@@ -1803,25 +1794,25 @@ button:focus {
 
 .we3-listing-page header .neighborhood a, .we3-listing-page header .zip a {
     font-family: GothamPro Regular !important;
-    color: #51B3AE !important;
-    border: 2px solid #51B3AE !important;
+    color: #2bb4ae !important;
+    border: 2px solid #2bb4ae !important;
 }
 i.icon-share2 {
     font-family: "icomoon";
 }
 .we3-listing-page .listing-detail-main-info .utility-button button i {
-    color: #51B3AE !important;
+    color: #2bb4ae !important;
 }
 
 .we3 .neighborhood a:hover, .we3 .zip a:hover, .we3 .state a:hover, a.feature-tag:hover {
-    background-color: #51B3AE !important;
+    background-color: #2bb4ae !important;
     text-decoration: none;
     color: #fff!important;
 }
 .we3-listing-page .listing-detail-main-info .contact-agent-button {
     dfont-family: GothamPro Regular !important;
-    color: #51B3AE !important;
-    border: 2px solid #51B3AE !important;
+    color: #2bb4ae !important;
+    border: 2px solid #2bb4ae !important;
 }
 
 .we3-listing-page .listing-detail-main-info .utility-button button:hover {
@@ -1830,7 +1821,7 @@ i.icon-share2 {
 }
 
 .we3-listing-page .listing-detail-main-info .utility-button button {
-    border-color: #51B3AE !important;
+    border-color: #2bb4ae !important;
 }
 
 .we3-listing-page .listing-detail-main-info .contact-agent-button i {
@@ -1839,17 +1830,17 @@ i.icon-share2 {
 .we3-listing-page .listing-detail-main-info .contact-agent-button {
     font-family: GothamPro Regular;
     color: #ffffff !important;
-    background: #51B3AE !important;
-    border: 2px solid #51B3AE !important;
+    background: #2bb4ae !important;
+    border: 2px solid #2bb4ae !important;
 }
 
 .listing-detail-main-info .utility-button button .label, body .we3-listing-page .listing-detail-main-info .utility-button button i {
-    color: #51B3AE !important;
+    color: #2bb4ae !important;
 }
 
 ul.share-button li {
     font-family: GothamPro Regular !important;
-    color: #51B3AE !important;
+    color: #2bb4ae !important;
 }
 
 ul.share-button li i{ margin-right:10px; font-family: "icomoon";}   
@@ -1864,18 +1855,18 @@ ul.share-button li.delicious i{ color:#3399ff; font-family: "icomoon"; }
 ul.share-button li.reddit i{ color:#000000; font-family: "icomoon";}
 
 .we3-listing-page .listing-detail-main-info .info-agent .agent-profile .realtor-url a {
-    color: #51B3AE !important;
+    color: #2bb4ae !important;
 }
 
 .we3-listing-page .listing-detail-main-info .broker-profile h4 a {
-    color: #51B3AE !important;
+    color: #2bb4ae !important;
 }
 
 .we3-listing-page  span.listedby.broker a {
      color: #51B3AE;
 }
 .we3-listing-page .info-section-features ul li a {
-    color: #51B3AE !important;
+    color: #2bb4ae !important;
 }
 
 .we3-listing-page .info-section ul li i{
@@ -1902,8 +1893,8 @@ ul.share-button li.reddit i{ color:#000000; font-family: "icomoon";}
 
 .we3-listing-page #contact-agent-section button[type=submit] {
     font-family: GothamPro Regular !important;
-    background: #51B3AE !important;
-    border: 2px solid #51B3AE !important;
+    background: #2bb4ae !important;
+    border: 2px solid #2bb4ae !important;
 }
 
 .home.blog.logged-in.admin-bar.we3-real-estate.we3-listing.we3-page.customize-support.tos-desktop .footer {
@@ -1911,7 +1902,7 @@ ul.share-button li.reddit i{ color:#000000; font-family: "icomoon";}
 }
 
 .we3-listing-page .gallery #carousel-listing .flex-active-slide {
-    border: 3px solid #51B3AE !important;
+    border: 3px solid #2bb4ae !important;
 }
 .we3-listing-page #gallery-expander a, .we3-listing-page #video-expander a {
     color: #51B3C0 !important;
@@ -1919,7 +1910,7 @@ ul.share-button li.reddit i{ color:#000000; font-family: "icomoon";}
 }
 
 .we3-listing-page .info-section-features ul li a:hover {
-    background: #51B3AE !important;
+    background: #2bb4ae !important;
     color: #ffffff !important;
 }
 
@@ -1930,11 +1921,59 @@ ul.share-button li.reddit i{ color:#000000; font-family: "icomoon";}
     font-family: "icomoon";
 }
 
-.we3-search-bar .we3-search-bar-container, body div.page.we3 .listing {
-    max-width: 1024px;
-    margin: 14px auto !important;
+ div.page.we3 {
+    margin-top: 72px !important;
 }
 
+.we3-search-page.fixed .we3-filter-search-bar .we3-search-bar-container .we3-search-button {
+    height: 30px !important;
+}
+
+.we3 .we3-search-results .we3-pagination ul li.active span {
+    color: #fff !important;
+}
+
+body ul.we3-filters li {
+    border: 1px solid #000 !important;
+    color: #000 !important;
+    font-family: GothamPro Regular !important;
+}
+
+.we3-search-page.fixed .we3-filter-search-bar .we3-refine-bar .we3-search-element {
+    padding: 5px 20px !important;
+}
+
+ul.we3-filters li i {
+    font-family: icomoon !important;
+}
+
+.we3-search-page .we3-filter-search-bar .we3-refine-bar .we3-search-element {
+    padding: 10px 20px 20px 10px !important; 
+}
+
+.we3-search-page.fixed .we3-filter-search-bar .we3-refine-bar .we3-search-element {
+    padding: 3px 20px 10px !important;
+}
+
+.we3-search-page .we3-filter-search-bar .we3-refine-bar .we3-refine-area .we3-refine-content ul.checkbox-options li i, .we3-search-page .we3-filter-search-bar .we3-refine-bar .we3-refine-area .we3-refine-content ul.radio-options li i {
+    margin-right: 8px;
+    color: #9B9FA0;
+    font-size: 14px;
+    font-family: icomoon !important;
+}
+
+.we3-search-page.fixed .we3-filter-search-bar .we3-search-bar-container .we3-omni-search .we3-loc-container input.we3-loc-search-box {
+    line-height: 21px !important;
+}
+a.contact-agent-button.call-agent.has-mobile:nth-child(odd) {
+    padding-left: 4px;
+    margin-right: 9px;
+}
+
+a.contact-agent-button.call-agent.has-mobile:nth-child(odd) .{
+    padding-left: 4px;
+    margin-right: 9px;
+}
 
 /**********************Agent Single ********************/
 
@@ -1945,7 +1984,7 @@ ul.share-button li.reddit i{ color:#000000; font-family: "icomoon";}
 }
 
 .we3 .agent .agent-main-info .agent-brokerage a {
-    color: #51B3AE !important;
+    color: #2bb4ae !important;
 }
 
 i.icon-address-book {
@@ -1953,17 +1992,17 @@ i.icon-address-book {
 }
 
 .agent .agent-main-info .contact-agent-button {
-    background: #51B3AE !important;
-    border: 2px solid #51B3AE !important;
+    background: #2bb4ae !important;
+    border: 2px solid #2bb4ae !important;
 }
 
 .agent .agent-main-info .contact-agent-button.call-agent {
     background: #FFF !important;
-    color: #51B3AE !important;
+    color: #2bb4ae !important;
 }
 
 .agent .agent-main-info .contact-agent-button.call-agent .label {
-    color: #51B3AE !important;
+    color: #2bb4ae !important;
 }
 
 i.icon-mobile {
@@ -1971,17 +2010,17 @@ i.icon-mobile {
 }
 
 .agent.listings .listings-section article.listing:hover {
-    border-color: #51B3AE !important;
+    border-color: #2bb4ae !important;
 
 }
 
 .agent.listings .listings-section article.listing .price {
-    color: #51B3AE !important;
+    color: #2bb4ae !important;
 }
 
 .agent #contact-agent-section button[type=submit] {
-    background: #51B3AE !important;
-    border: 2px solid #51B3AE !important;
+    background: #2bb4ae !important;
+    border: 2px solid #2bb4ae !important;
 }
 
 .home.blog.logged-in.admin-bar.we3-real-estate.we3-brokerage.we3-page.customize-support .footer {
@@ -2126,7 +2165,7 @@ i.icon-mobile {
     }
     .headerImage h1 {
         font-family: GothamPro Light, san-serif;
-        font-size: 60px;
+        font-size: 40px !important;
         line-height: 320px !important;
         height: 174px !important;
     }
@@ -2889,6 +2928,13 @@ i.icon-mobile {
     cursor: pointer;
 }
 
+#tabs .current-menu-item > a {
+    border-bottom: 3px solid #51B3AE;
+    color: #000000;
+    position: relative;
+    padding-bottom: 26px;
+}
+
 #tabs ul > li > a {
     color: #9a9a9a;
     font-size: 14px;
@@ -3029,11 +3075,9 @@ i.icon-mobile {
     font-size: 80px;
 }
 
-.page-template-terms_conditions .headerCaption h4 {
-    font-family: ChronicleDispLight;
-    font-size: 22px;
-    text-transform: uppercase;
-    color: #464748;
+.page-template-terms_conditions .staticContent h3 {
+    font-family: GothamPro Regular;
+    font-size: 20px;
 }
 
 .page-template-terms_conditions .staticContent p {
@@ -3567,11 +3611,6 @@ body .we3 .we3-sort-by-container .we3-sort-by {
     height: 50px;
 }
 
-body .we3-search-bar .we3-search-bar-container .we3-search-type ul li:hover {
-    background: none !important;
-    color: #8d8d8d !important;
-}
-
 body .we3-search-bar .we3-search-button {
     background: #3AB3AE;
     font-family: GothamPro Regular;
@@ -3715,9 +3754,16 @@ body .we3-search-bar .we3-search-bar-container .we3-search-type ul li {
     }
 }
 
-@media (max-width: 600px) {
+
+@media (max-width: 996px) {
     .we3-brokerage .headerImage h1 {
-        font-size: 1.2em !important;
+        font-size: 50px;
+    }    
+}
+
+@media (max-width: 686px) {
+    .we3-brokerage .headerImage h1 {
+        font-size: 40px !important;
         -ms-word-break: break-all;
         word-break: break-all;
         word-break: break-word;
@@ -3736,6 +3782,7 @@ body .we3-search-bar .we3-search-bar-container .we3-search-type ul li {
 @media (max-width: 480px) {
     .we3-brokerage .headerImage h1 {
         font-size: .6em !important;
+        transform: translateY(-30px);
     }
     .we3-brokerage .headerImage h2 {
         top: 56%;
@@ -3743,6 +3790,11 @@ body .we3-search-bar .we3-search-bar-container .we3-search-type ul li {
         line-height: 20px;
         width: 100%;
         font-size: .4em;
+        transform: translateY(-18%);
+    }
+
+    .we3 .broker .agents-section article.agent {
+        width: 100% !important;
     }
 }
 
@@ -3778,12 +3830,104 @@ body .we3-search-bar .we3-search-bar-container .we3-search-type ul li {
 .we3 .footer .copy {
     color: #6b6b6b !important;
 }
-
-/*******************AGENT MOBILE******************/
-
-@media (max-width: 480px) {   
-
-    .we3 .broker .agents-section article.agent {
+@media screen and (max-width: 667px) {
+    .we3 .agent #contact-agent-section fieldset.contact-info, .we3 .agent #contact-agent-section fieldset.contact-message {
         width: 100% !important;
+        padding-left: 0;
+        padding-right: 0;
     }
+}
+
+.we3-search-bar {
+/*    background: #fff !important;
+    background-color: #fff !important;*/
+}
+
+.icon-close:before {
+    content: "\e6ff";
+    font-family: "icomoon" !important;
+}
+
+ .we3-pagination ul li .prev, .we3 .we3-search-results .we3-pagination ul li .next {
+    background-color: #2bb4ae !important;
+ }
+ .we3 .we3-search-results .top-pagination.we3-pagination ul li .prev, .we3 .we3-search-results .top-pagination.we3-pagination ul li .next {
+    background: none !important;
+ }
+
+.we3-listing-page header .breadcrumbs .prev-next i {
+    color: #2bb4ae;
+}
+
+.we3-listing-page header div.days-ago {
+    border-right: 5px solid #2bb4ae !important;
+    height: 40px;
+}
+
+body .we3-listing-page .listing-detail-main-info .utility-button button:hover {
+    background: #2bb4ae !important;
+}
+
+.we3-listing-page .listing-detail-main-info .utility-button button:active .label, body .we3-listing-page .listing-detail-main-info .utility-button button:hover .label, body .we3-listing-page .listing-detail-main-info .utility-button button:hover i {
+    color: #FFF !important;
+    border-color: 2px solid #000;
+}
+
+.we3-listing-page .listing-detail-main-info .utility-button {
+    width: 32% !important;
+}
+
+ul#list_realestate-detail-share {
+    top: 34px !important;
+}
+
+body .we3-listing-page .listing-detail-main-info .utility-button button.blankslate-share-menu-open {
+    background: #393f40 !important;
+    background-color: #393f40 !important;
+    border-color: #393f40 !important;
+    border-top-color: rgb(57, 63, 64);
+    border-right-color: rgb(57, 63, 64);
+    border-bottom-color: rgb(57, 63, 64);
+    border-left-color: rgb(57, 63, 64);
+    color: #ffffff !important;
+    border-bottom-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    outline: none;
+}
+
+body .we3-search-bar .we3-search-bar-container .we3-search-button:hover {
+    background: #228889 !important;
+}
+
+body .we3-search-page .we3-filter-search-bar .we3-refine-bar .we3-search-element:hover {
+    background: #228889 !important;
+}
+
+.we3-search-page .we3-filter-search-bar .we3-refine-bar .we3-search-element.active label {
+    color: #000 !important;
+}
+
+.we3-search-page .we3-filter-search-bar .we3-refine-bar .we3-search-element.active {
+    background: #fff !important;
+    /* color: #000 !important; */
+}
+exrny.staging.wpengine.com/
+
+.we3-search-page .we3-filter-search-bar .we3-refine-bar .we3-search-element.active label {
+    color: #000 !important;
+}
+
+.blog .footer {
+    height: 28px;
+    position: relative;
+    left: 0;
+    bottom: 10px;
+    overflow: hidden;
+    width: 100%;
+    z-index: 2;
+    /* margin-top: -36px; */
+}
+
+.we3-mobile-refine-button ul li:hover {
+    background: #228889 !important; 
 }

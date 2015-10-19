@@ -239,16 +239,17 @@
 		text-align: center;
 		height: 25px;
 		line-height: 25px;
+		padding-bottom: 15px;
 	}
-	.search .searchForm .contacts .contactItem {
-		/*background: url(../img/contact_icons_large.png) 0 0 no-repeat;*/
+/*	.search .searchForm .contacts .contactItem {
+		background: url(../img/contact_icons_large.png) 0 0 no-repeat;
 		display: inline-block;
 	    padding-left: 0;
 	    padding-right: 0;
 	    font-size: 17px;
 	    color: #fff;
 	    margin: 0 10px;
-    }
+    }*/
 	.search .searchForm .contacts .call {background-position: 0 0;}
 	.search .searchForm .contacts .email {background-position: 0 -25px;}
 	.search .searchForm .contacts .chat {background-position: 0 -50px;}
@@ -332,14 +333,8 @@
 	}
 
 	.navigation ul li {
-		font-family: pn_light !important;
+		font-family: GothamProLight !important;
 	}
-
-
-
-
-
-
 
 
 	/*search*/
@@ -477,15 +472,17 @@
 		line-height: 25px;
 	}
 	.search .searchForm .contacts .contactItem {
-		background: url(../img/contact_icons_large.png) 0 0 no-repeat;
 		display: inline-block;
 		padding-left: 30px;
 		font-size: 1.2em;
 		color: #fff;
 		margin: 0 10px;
 	}
-	.search .searchForm .contacts .call {background-position: 0 0;}
-	.search .searchForm .contacts .email {background-position: 0 -25px;}
+	.search .searchForm .contacts .call {background-position: 0 0; padding-right: 23px;}
+	.search .searchForm .contacts .email {
+	    background-position: 0 -25px;
+	    padding-right: 16px;
+	}	
 	.search .searchForm .contacts .chat {background-position: 0 -50px;}
 	
 
@@ -538,15 +535,15 @@
 
 	/*navigation mobile*/
 	.navigationWrapper {
-		display: none;
-		position: absolute;
-		top: 68px;
-		border-top: 1px solid #5f5e5e;
-		background: none rgba(0, 0, 0, .70);
-		width: 100%;
-		padding-top: 60px;
-		padding-bottom: 0px;
-		z-index:100;
+	    display: none;
+	    position: absolute;
+	    top: 68px;
+	    border-top: 1px solid #5f5e5e;
+	    background: #000;
+	    width: 100%;
+	    padding-top: 60px;
+	    padding-bottom: 0px;
+	    z-index: 100;
 	}
 	.header.active .navigationWrapper {
 		display: block;
@@ -664,9 +661,77 @@ About Mobile
 	.about h2 {
     font-size: 60px !important;
 	}
+	.blog .footer {
+	    height: 28px;
+	    position: relative;
+	    left: 0;
+	    bottom: 20px;
+	    overflow: hidden;
+	    width: 100%;
+	    z-index: 2;
+	    /* margin-top: -36px; */
+	}
 }
 
 @media (max-width: 480px) {
+	.search .searchForm .contacts .contactItem {
+	    padding-left: 0 !important;	
+	}
+	input#street-address::-webkit-input-placeholder {
+	   	font-size: .8em !important;
+	}
+
+	input#street-address:-moz-placeholder { /* Firefox 18- */
+	   font-size: .8em !important;
+	}
+
+	input#street-address::-moz-placeholder {  /* Firefox 19+ */
+	   font-size: .8em !important;
+	}
+
+	input#street-address:-ms-input-placeholder {  
+	   font-size: .8em !important;
+	}
+	.we3-search-bar .we3-search-bar-container .we3-omni-container {
+	    padding-right: 0 !important; 
+	}
+	.we3-listing-page #contact-agent-section fieldset.contact-info, .we3-listing-page #contact-agent-section fieldset.contact-message {
+	    width: 100% !important;
+	}
+	.we3-listing-page #contact-agent-section fieldset.contact-info {
+	   
+    	margin-right: 0 !important;
+    	padding-right: 0 !important;
+	}
+	.we3-listing-page #contact-agent-section fieldset.contact-message {
+	    padding-right: 0 !important;
+	}
+	div.page.we3 {
+	    margin: 5px auto 32px auto !important;
+	}
+	.we3-listing-page #contact-agent-section fieldset.contact-message textarea {
+	    font-size: 14px !important;
+	}
+	.blog .header {
+	    position: relative !important;
+	    background: #000 ;
+	}
+
+	body .we3-search-bar .we3-search-bar-container, body div.page.we3 .listing {
+    margin: 3px auto !important;
+	}
+
+	body div.page.we3.we3-agent-page {
+	    margin: 24px auto 30px auto !important;
+	}
+}
+
+@media screen and (max-width: 667px) {
+	body .we3-search-bar.show-mobile .we3-search-bar-container .we3-search-type ul li {
+   		width: 49% !important;
+	}
+}		
+
 	.about .staticContent {
 	    padding-left: 0;
 	    padding-right: 0;
@@ -765,9 +830,9 @@ About Mobile
     padding-bottom: 0;
 	}
 
-	#history {
+	/*#history {
     margin-left: 0;
-	}
+	}*/
 	
 	.about h2 {
     font-size: 30px !important;
@@ -808,7 +873,23 @@ About Mobile
     position: relative;
     bottom: 180px;
     /* width: 500px; */
-}
+	}
 }
 
+.we3-listing-page header .breadcrumbs .prev-next a {
+    color: #2bb4ae !important;
+}
 
+.icon-fa-single-arrow-right:before {
+    content: "\f105";
+    color: #2bb4ae;
+}
+
+body .we3-search-bar .we3-search-bar-container .we3-omni-search .we3-loc-container .we3-loc-pill {
+    background: #2bb4ae !important;
+    color: #FFF;
+}
+
+body .we3-search-bar .we3-search-bar-container .we3-omni-search .we3-loc-container .we3-loc-pill i {
+    font-family: icomoon !important;
+}

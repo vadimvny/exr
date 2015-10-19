@@ -37,6 +37,7 @@ class EXR_Theme
     {
         register_nav_menu('footer-nav', __('Footer Nav'));
         register_nav_menu('top-right', __('Top Right'));
+    	register_nav_menu('middle', __('Disclaimer Nav'));
     }
     
     public static function getInstance()
