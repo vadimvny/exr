@@ -82,44 +82,80 @@
 	}
 
 	.about h2 {
-    font-family: ChronicleDispLight;
-    color: #fff;
-    font-size: 42px;
-    text-transform: uppercase;
-    letter-spacing: 25px;
-    text-align: center;
-    margin:  0;
+	    font-family: ChronicleDispLight;
+	    color: #fff;
+	    font-size: 42px;
+	    text-transform: uppercase;
+	    letter-spacing: 25px;
+	    text-align: center;
+	    margin:  0;
     
 	}
+	
 	.about #mission p {
-    /* float: right; */
-    padding-right: 0; */
-    color: #97979C;
-    /* margin-left: 24px; */
-}
+	    padding-right: 0; 
+	    color: #97979C;
+	}
 
-.about #brand p {
-    /* float: left; */
-    z-index: 1;
-    position: relative;
-    left: 0px;
-}
+	.about #mission img {
+	    float: none;
+	    height: auto;
+	    width: 100%;
+	}
+
+	.about-content {
+	    margin-left: 0;
+	    margin-top: 0;
+	}
+
+	.about #brand p {
+	    z-index: 1;
+	    position: relative;
+	    left: 0px;
+	}    
+	
+	.about #mission p {
+	    float: none;
+	    padding-right: 0;
+	    color: #97979C;
+	    margin-left: 0 !important;
+	}
+
+	.about .timeline-container {
+	    position: relative;
+	    margin-bottom: 200px;
+	    /* top: 176px; */
+	    left: 0;
+	}
+
+	.about .arrow {
+	    left: 0;
+	    right: 11px;
+	}
+
+	.page-template-about .footer {
+	    margin-top: 40px;
+	    /* top: 20px; */
+	}
 
 	/*search*/
 	.search {
-		background-size: auto 100%;
+		background-size: cover;
 	}
+	
 	.search .searchForm {
-		background: none rgba(39, 39, 39, 0.9);
-		position: relative;
-		top: 0;
-		margin: 150px auto 0 auto;
-		width: 80%;
-		height: auto;
-		padding-bottom: 40px;
+	    background: none rgba(39, 39, 39, 0.9);
+	    position: relative;
+	    top: 0;
+	    margin-top: 0;
+	    margin: 50px auto 0 auto !important;
+	    width: 80%;
+	    height: auto;
+	    padding-bottom: 40px !important;
 	}
+	
 	.search .searchForm h2 {
-		font-size: 2.3em;
+		font-size: 48px !important;
 		text-align: center;
 		color: #fff;
 		font-weight: normal;
@@ -339,16 +375,16 @@
 
 	/*search*/
 	.search {
-		background-size: auto 100%;
+		background-size: cover;
 	}
 	.search .searchForm {
-		background: none rgba(39, 39, 39, 0.9);
-		position: relative;
-		top: 0;
-		margin: 150px auto 0 auto;
-		width: 80%;
-		height: auto;
-		padding-bottom: 40px;
+	    background: none rgba(39, 39, 39, 0.9);
+	    position: relative;
+	    top: 0;
+	    margin: 50px auto 0 auto;
+	    width: 80%;
+	    height: auto;
+	    padding-bottom: 10px;
 	}
 	.search .searchForm h2 {
 		font-size: 2.3em;
@@ -603,7 +639,7 @@
 	}
 	.navigation > li.exp.active > a {
 	    color: #d2d2d2;
-	    border-top: 3px solid #2bb4ae;
+	    border-top: 3px solid #33cccc;
 	}
 	.navigation > li.exp.active ul {
 		display: block;
@@ -628,7 +664,8 @@
 About Mobile
 ****************************************************/
 @media (max-width: 996px) {
-	 #brand .text-container {
+	
+	#brand .text-container {
 	    width: 100% !important; 
 	    z-index: 1;
 	    display: inline-block;
@@ -637,9 +674,9 @@ About Mobile
 
 	#brand .symbol-container {
     width: 100% !important;
-    z-index: 0;
-    float: none;
-	}
+    z-index: -10;
+    /* position: absolute; */
+ }
 	.about h2 {
 	    font-size: 40px !important; 
 	}
@@ -661,6 +698,12 @@ About Mobile
 	.about h2 {
     font-size: 60px !important;
 	}
+
+	.page-template-commercial .navigation > li > a, .page-template-residential .navigation > li > a {
+	    font-size: 21px !important;
+	    font-family: GothamPro Light;	   
+	}
+
 	.blog .footer {
 	    height: 28px;
 	    position: relative;
@@ -674,6 +717,14 @@ About Mobile
 }
 
 @media (max-width: 480px) {
+	.search .searchForm {
+	    margin: 100px auto 0 auto;
+	    padding-bottom: 40px;
+	}
+	.search .searchForm h2 {
+	    font-size: 48px !important;
+	   
+	}
 	.search .searchForm .contacts .contactItem {
 	    padding-left: 0 !important;	
 	}
@@ -726,11 +777,22 @@ About Mobile
 	}
 }
 
-@media screen and (max-width: 667px) {
+@media (max-width: 667px) {
 	body .we3-search-bar.show-mobile .we3-search-bar-container .we3-search-type ul li {
    		width: 49% !important;
 	}
-}		
+	.search .searchForm {
+	    margin: 50px auto 0 auto;
+	}
+	.we3-search-page .we3-filter-search-bar.show-mobile .we3-refine-bar .we3-refine-area.closed {
+	    margin-top: 10px;
+	}		
+	
+/*	.search .searchForm  .we3-mobile-search-button {
+	    width: 40% !important;
+	    max-width: 250px !important;
+	    min-width: 200px !important;
+	}*/
 
 	.about .staticContent {
 	    padding-left: 0;
@@ -741,24 +803,31 @@ About Mobile
 	   display: none;
 	}
 
+	.about #team h2 {
+		margin-top: 40px
+	}
+
+	.about #history h2.parallax {0px
+		text-align: center;
+		margin-left: 25px;
+	}
+
 	.about .staticContent h2 {
-    font-family: ChronicleDispLight;
-    color: #fff;
-    font-size: 30px !important;
-    text-transform: uppercase;
-    letter-spacing: 25px;
-    text-align: center;
-    margin-top: 0;
-    position: relative;
-    bottom: 0;
-    left: 0;
-    margin-bottom: 50px;
-}
-	.about #mission p {
-	    float: right;
-	    padding-right: 0;
-	    color: #97979C;
-	    margin-left: 0 !important; */
+		font-family: ChronicleDispLight;
+		color: #fff;
+		font-size: 30px !important;
+		text-transform: uppercase;
+		letter-spacing: 25px;
+		text-align: center;
+		margin-top: 0;
+		position: relative;
+		bottom: 0;
+		left: 0;
+		margin-bottom: 50px;
+	}
+
+	.about #brand h2 {
+		margin-top: 20px;
 	}
 	
 	.about #mission img {
@@ -789,8 +858,9 @@ About Mobile
 
 	.about .tl-heading h4 {
     	font-size: 14px;
-   		text-align: right;
-	}
+    	text-align: right;
+    	margin-top: 10px;
+ }
 	.about h4.date {
 	    font-family: GothamPro Light;
 	    color: #fff;
@@ -846,12 +916,6 @@ About Mobile
 	    margin-right: 0;
 	    margin-left: 0; 
 	}
-	.about #mission p {
-    	float: right;
-    	padding-right: 0;
-    	color: #97979C;
-    	 margin-left: 0px;
-	}
 
 	.about #brand img {
 		margin-right: -15px;
@@ -874,22 +938,145 @@ About Mobile
     bottom: 180px;
     /* width: 500px; */
 	}
+	.we3-search-bar.show-mobile .we3-refine-area .we3-refine-content .we3-slider-container div.container {
+    color: #000 !important;
+	}
+	.we3-search-bar.show-mobile .we3-refine-area .we3-refine-content {
+	    background: #fff !important;
+	    margin-bottom: 10px;
+	}
+	.page-template-residential .footer, .page-template-commercial .footer {
+	    display: none; 
+	}
 }
 
 .we3-listing-page header .breadcrumbs .prev-next a {
-    color: #2bb4ae !important;
+    color: #33cccc !important;
 }
 
 .icon-fa-single-arrow-right:before {
     content: "\f105";
-    color: #2bb4ae;
+   
 }
 
 body .we3-search-bar .we3-search-bar-container .we3-omni-search .we3-loc-container .we3-loc-pill {
-    background: #2bb4ae !important;
+    background: #33cccc !important;
     color: #FFF;
 }
 
 body .we3-search-bar .we3-search-bar-container .we3-omni-search .we3-loc-container .we3-loc-pill i {
     font-family: icomoon !important;
 }
+
+@media (max-height: 676px) {
+/*	.single-new-developments .social-container {
+	    display: none;
+	}
+	.single-new-developments .social-container {
+	    border-left: 1px solid #EEEEEE;
+	    margin-bottom: 0;
+	    padding-left: 0; 
+	    margin-top: 0;
+	}
+	.single-new-developments .mobile.new-dev-sidebar.social-container h3  {
+		margin-top: 0;
+	}
+	.single-new-developments .mobile.new-dev-sidebar.social-container h4 {
+		text-transform: lowercase;
+	} */
+	.single-new-developments .social-container {
+	    border-left: 1px solid #EEEEEE;
+	    margin-bottom: 76px;
+	    padding-left: 0;
+	    margin-bottom: 20px !important;
+	}
+	.single-new-developments h2 {
+	    color: #000000;
+	    font-family: GothamPro Regular, san-serif;
+	    margin-top: 40px;
+	    margin-bottom: 18px;
+	}
+	.single-new-developments .agent-name {
+	    margin-top: 10px;
+	    margin-bottom: 12px;
+	    font-size: 18px;
+	    position: relative;
+	    right: 0;
+	}
+	.single-new-developments .phone {
+	    position: relative;
+	    right: 0;
+	}
+	.single-new-developments .email {
+	    position: relative;
+	    right: 0;
+	}
+	.single-new-developments #listing h2 {
+	    margin-bottom: 40px !important;
+	    margin-top: 0;
+	}
+	.single-new-developments .we3-listings-filters ul {
+	    text-align: center;
+	    border-bottom: 1px solid #eaeaea;
+	    height: 41px;
+	}
+	.single-new-developments .trains {
+	    padding-top: 0;
+	}
+}
+
+@media (max-width: 375px) {
+    .search .searchForm {
+	    margin: 100px auto 0 auto !important;
+	    padding-bottom: 40px !important;
+	}
+	.single-post .we3-listings-filters ul {
+	    text-align: center;
+	    border-bottom: none;
+	    height: 42px;
+	    margin-bottom: 70px;
+	}
+	.single-post .we3-listings-filters ul > li.active {
+	    display: inline-block;
+	    font-size: 14px;
+	    color: #000000;
+	    border-bottom: 2px solid #33cccc;
+	    height: 40px; */
+	    margin-bottom: 20px;
+	}
+}
+
+@media (max-width: 600px) {
+	.single-post .headerImage {
+	    height: 300px;
+	}
+	.single-post .we3-more-link-container {
+	    width: 100%;
+	    text-align: center;
+	    margin-top: 20px;
+	}
+
+}
+
+@media (min-width: 321px) and (max-width: 379px) {	
+
+	.about .arrow {
+	    text-align: center;
+	    position: absolute;
+	    margin-top: 200px;
+	    left: 0;
+	    right: 4px;
+	}
+	.about .nav ul li {
+	    right: 65px;
+	}
+	
+	.about .staticContent h2 {
+	    left: 14px;
+	}
+	.about .nav {
+	    position: relative;
+	    top: -4px;
+	}
+}
+	

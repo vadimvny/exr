@@ -7,57 +7,22 @@ get_header();
 ?>
 
 <style>
-.about .staticContent .parallax-background{opacity:0;margin-top:220px;}
-.about .staticContent .scrollme.fixed{position:fixed!important;width:100%;margin-top:0;left:0;top:0;}
-.about .staticContent .scrollme.fixed .parallax-background, .about .staticContent .scrollme.fixed .parallax{position:absolute;width:100%;}
-.scrollme.fixed .parallax{top:0;}
+#slide-1 img {
+	width: 400px;
+	height: 400px;
+	float: right;
+}
+}
 </style>
 <script>
 jQuery( document ).ready(function() {
 
 	
-	var height= jQuery('#history').height();
-	var opacity = 0;
-	var hOpacity = 1;
-	var headerTop = 20;
-	var startParallax = jQuery('.parallax').offset().top - jQuery('.scroll-top').offset().top
-	
-	jQuery( window ).scroll(function() {
-	
-		var thisTop = jQuery('.scroll-top').offset().top - jQuery(window).scrollTop();
-		console.log('thisTop: ' + thisTop);
-		var pTop =  thisTop + 300;
-		if(thisTop <= startParallax){	
-
-			jQuery('#history').height(height);
-			jQuery('.scrollme').addClass('fixed');
-			jQuery('.parallax-background').css('top', pTop);
-			opacity = opacity+.1;
-			jQuery('.parallax-background').css('opacity', opacity);		
-			
-		}else{
-			jQuery('.scrollme').removeClass('fixed');
-			jQuery('.parallax').removeAttr('style');
-			jQuery('.parallax-background').removeAttr('style');
-			opacity = 0;
-			hOpacity = 1;
-			headerTop = 20;
-			jQuery('.parallax-background').css('opacity', opacity);
-			jQuery('.parallax').css('opacity', hOpacity);
-		}
+	var s = skrollr.init();
+ 
+	// Refresh Skrollr after resizing our sections
+	s.refresh(jQuery('.homeSlide'));
 		
-		
-		if(thisTop <= (startParallax - 200)){
-			   headerTop = headerTop - 20;
-			   jQuery('.parallax').css('top', headerTop);
-			   hOpacity = hOpacity - .1;
-			   jQuery('.parallax').css('opacity', hOpacity);
-		}
-		
-		
-		
-	});
-
 });
 </script>
 
@@ -91,21 +56,44 @@ jQuery( document ).ready(function() {
 						</li>
 					</ul>
 				</div>
-				<div class="staticContent">
-					<section id="mission">
+				<section id="slide-1" class="homeSlide">
 						<div class="row">
+					 <div class="bcg"
+
+					        data-center="background-position: 50% 0px;"
+
+					        data-top-bottom="background-position: 50% -100px;"
+
+					        data-anchor-target="#slide-1"
+
+					    >
 							<h2>Mission</h2>
-							<div class="col-md-7">
-								<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/ui/img/mission.png" alt="mission" />
-							</div>
+				 			<div class="hsContainer">
+					            <div class="hsContent"
+
+					                data-center="bottom: 200px; opacity: 1"
+
+					                data-top="bottom: 1200px; opacity: 0"
+
+					                data-anchor-target="#slide-1 img"
+
+           							 >
+								<div class="col-md-7">
+								    <div class="image-container">	
+										<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/ui/img/mission.png" alt="mission" />
+								    </div>
+								</div>
+		
 							<div class="col-md-5">
 								<div class="about-content">
 									<?php the_content(); ?>
 								</div>
 							</div>
+						
 						</div>
+					</div> <!-- bcg end -->
 					</section>
-					<section id="brand">
+					<section id="brand" class="bg__">
 						<div class="row">
 							<h2>Brand</h2>
 							<div class="col-md-12">

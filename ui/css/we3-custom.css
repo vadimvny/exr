@@ -21,7 +21,7 @@ body .we3-search-bar .we3-search-bar-container .we3-omni-search .we3-loc-contain
   padding-bottom: 7px;
 }
 body.we3-page .we3-search-bar .we3-search-bar-container .we3-omni-search .we3-loc-container.has-pills{padding-top:13px;padding-bottom:7px;}
-body .we3-search-bar .we3-search-bar-container .we3-search-element{margin:0;margin-left:-3px;text-transform:uppercase;font-size:14px;}
+body .we3-search-bar .we3-search-bar-container .we3-search-element{margin:0;margin-left:-3px;text-transform:capitalize;font-size:14px;}
 
 body .fixed .we3-search-bar .we3-search-bar-container .we3-search-element{height:auto;vertical-align:top;}
 body .we3-search-page.fixed .we3-filter-search-bar .we3-search-bar-container .we3-search-type .we3-listing-type{line-height:24px;}

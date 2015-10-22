@@ -15,14 +15,16 @@ body, home {
 
 .navigation .current-menu-item > a {
     color: #fff;
-    border-bottom: 2px solid #2bb4ae;
+    border-bottom: 2px solid #33cccc;
     line-height: 24px;
 }
 
 .mobileOnly .current-menu-item > a {
     border-top: none;
     color: #d2d2d2;
-    border-bottom: 3px solid #2bb4ae;
+    border-bottom: 3px solid #33cccc;
+    width: 100%;
+    font-family: GothamPro Regular;
 }
 
 .sub-menu .current-menu-item > a {
@@ -38,13 +40,9 @@ body, home {
 }    
 
 .neighborhoods {
-    background-color: #F0F0F0;
+    background-color: #fff;
     height:100%;
     min-height: 100%;
-}
-
-.page-template-neighborhoods .container{
-    background-color: #F0F0F0;
 }
 
 .page-template-neighborhoods .footer .desktopOnly, 
@@ -494,17 +492,25 @@ span.wpcf7-not-valid-tip {
 } 
 
 @media (max-width: 480px) {
-    .headerImage h1 {
+/*    .headerImage h1 {
         font-family: GothamPro Light, san-serif;
         font-size: .8em !important;
         line-height: 388px;
         height: 220px;
-    }
+    }*/
     
     .about-header h1 {
         font-family: GothamPro light;
         font-size: 40px;
     }
+
+/*      .page-template-page-new-developments .headerImage h1 {
+        font-family: GothamPro Light, san-serif;
+        font-size: .8em !important;
+        line-height: 388px;
+        height: 182px;
+    }*/
+    
 }
 /*************FORM OVERIDER MOBILE**********/
 
@@ -605,6 +611,7 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 div.page.we3.we3-agent-page {
     max-width: 1024px;
     margin: 94px auto 30px auto !important;
+    min-height: auto !important;
 }
 
 .footer {
@@ -616,4 +623,20 @@ div.page.we3.we3-agent-page {
     width: 100%;
     z-index: 2;
     /* margin-top: -36px; */
+}
+
+.we3-search-bar .we3-search-bar-container .we3-omni-search input.we3-loc-search-box::-webkit-input-placeholder{
+    font-family: GothamPro Medium !important;
+}
+
+.we3-search-bar .we3-search-bar-container .we3-omni-search input.we3-loc-search-box:-moz-placeholder{
+    font-family: GothamPro Medium !important;
+}
+
+.we3-search-bar .we3-search-bar-container .we3-omni-search input.we3-loc-search-box::-moz-placeholder {
+     font-family: GothamPro Medium !important;
+}
+
+.we3-search-bar .we3-search-bar-container .we3-omni-search input.we3-loc-search-box:-ms-input-placeholder {
+    font-family: GothamPro Medium !important;
 }

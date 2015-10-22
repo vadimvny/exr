@@ -7,9 +7,9 @@
 			<?php wp_nav_menu(array('theme_location' => 'footer-nav', 'container' => false, 'menu_class' => 'navigation footer-nav desktopOnly')); ?>
 		</div>
 		<div class="social">
-        	<a href="https://www.facebook.com/exrgroup" target="_blank" class="footer-social"><i class="icon-facebook"></i></a>
+        	<a href="https://www.facebook.com/exrny" target="_blank" class="footer-social"><i class="icon-facebook"></i></a>
          	<a href="https://twitter.com/exrgroup" target="_blank" class="footer-social"><i class="icon-twitter"></i></a>
-       		<a href="#" target="_blank" class="footer-social"><i class="icon-instagram"></i></a>
+       		<a href="https://instagram.com/exrny/" target="_blank" class="footer-social"><i class="icon-instagram"></i></a>
 
         </div>
 		
@@ -30,6 +30,8 @@
        
 	<script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() ); ?>/ui/js/jquery.nouislider.all.min.js"></script>
 		 */ ?>
+	<script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() ); ?>ui/js/jquery.tosrus.min.all.js"></script>
+	<script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() ); ?>ui/js/hammer.js"></script>
 	<script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() ); ?>/ui/js/app.js"></script> 
 	<script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() ); ?>/ui/js/jquery.scrollme.min.js"></script> 
     </body>

@@ -72,7 +72,7 @@ get_header(); ?>
 				if(empty($new_dev_post)){
 					return;
 				}
-				
+
 				$soldOut = get_field('exr_new_development_sold_out', $new_dev_post->ID); 
 				$soldOutDisplay = '';
 				if($soldOut=='sold-out'){
@@ -80,6 +80,8 @@ get_header(); ?>
 				}
 		
 			?>
+
+
 			<div class="row bottom-buffer">
 				<div class="col-md-6">
 			  
@@ -90,14 +92,15 @@ get_header(); ?>
 					</div>
 				</div>	
 				
-	
 				<div class="col-md-6">
 					<!-- <div class="listing-info"> -->
 					<div class="listing-data">	
 						<h3><a href="<?php echo get_permalink( $new_dev_post->ID ); ?>"><?=$new_dev_post->post_title?></a></h3>
-		
+						<?php $subTitle  = get_post_meta( $new_dev_post->ID, 'exr_new_development_address', true);  ?>
+						<h4><?php echo $subTitle; ?></h4>
 						<?=$soldOutDisplay?>
 						<div class="excerpt">
+							
 						<?php 
 							if (strlen($new_dev_post->post_excerpt) > 150) {
 								echo substr($new_dev_post->post_excerpt, 0, 150) . '...'; } else {
@@ -124,7 +127,6 @@ get_header(); ?>
        <?php } 
 ?>
   
- 
 <!--     <div class="row">
     	<div class="col-sm-12 margin-10"><hr/></div> 
 	</div> -->
@@ -135,7 +137,6 @@ get_header(); ?>
  		?>
 <!--        <div class="col-md-12 col-sm-12 margin-20"> 
  -->      	<?php exr_print_small_new_dev($new_devs[$i]); d?> 
-      	
       <!--  </div>  -->
       <?php } ?>
 <!--     </div> 

@@ -3,7 +3,7 @@
     <head>
         <title><?php wp_title( '|', true, 'right' ); ?></title>
         <meta charset="<?php bloginfo( 'charset' ); ?>">
-       <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <link href='http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/ui/css/jquery.nouislider.pips.css">
@@ -11,8 +11,9 @@
         <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri() ); ?>/ui/css/style.css">
         <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri() ); ?>/ui/css/mobile.css">
         <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri() ); ?>/ui/css/prettyPhoto.css">
+        <link rel="stylesheet" type="text/css" href="path/to/jquery.tosrus.all.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri() ); ?>/style.css">
-
+        <link rel="shortcut icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/favicon.ico" />
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>

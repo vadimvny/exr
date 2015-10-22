@@ -2,19 +2,23 @@
 <div class="headerImage" style="background-image:url('<?php echo $image[0]; ?>');">
 <h1><span class="headerCaption"><?php the_title(); ?></span></h1>
 </div>
-		<div class="staticContent">
-			<div class="contentTabs">
+<div class="staticContent">
+	<div class="contentTabs">
      <?php wp_reset_query(); ?>
     <div class="row margin-80">
     <section id="development">
-      <div class="col-sm-7 new-dev-main">
+      <div class="col-sm-7 new-dev-main ">
         <div class="article-container"> 
           <!-- article -->
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<h2><?php the_title(); ?></h2>
-		
-				<a href='https://www.google.com/maps/place/<?php the_field("show_on_the_map") ?>' class="show-map"  target="_blank">Show on Map</a>
+				<h4><?php $subTitle  = get_post_meta( get_the_id(), 'exr_new_development_address', true);
+					echo $subTitle;
+				  ?>
+				</h4>
 
+				<a href='https://www.google.com/maps/place/<?php the_field("show_on_the_map") ?>' target="_blank"><button class="show-map">Show on Map</button></a>
+				
 				<h3>Overview</h3>
 
 				<?php the_content(); // Dynamic Content ?>
@@ -29,8 +33,7 @@
 			<!-- /article -->
 		<?php
       		$amenities = get_field('exr_new_development_amenities');
-      	if(	!empty($amenities) && strlen($amenities)>1){
-      	?>
+      		      	?>
       		<hr>
 		<!-- 	<h2>Amenities</h2> -->
 			<div class="new-development-amenities new-dev-side-section">
@@ -64,24 +67,20 @@
 			  </div>	
 			</div>
 			<hr>
-        <?php } ?>  
          </div> <!-- article-container -->
      
         </div>
 
-    <div class="col-sm-5 margin-30  new-dev-sidebar">
+    <div class="col-sm-5 margin-30  new-dev-sidebar ">
         <div class="social-container">
         <h3> Share </h3>
         	<?php echo do_shortcode( '[cresta-social-share]' );?>
         	<h4>Visit Website</h4>
         	<a href='<?php the_field('development_link'); ?>' class="dev-link" target="_blank"><?php the_field('development_link'); ?></a>
    		</div>	<!-- social-container -->
-        <div class="counter">
-			Photos <span class="brackets"> (<?php the_field('counter'); ?>)</span>
-        </div>
+ 
         <div class="slider-container">
 		 	<?php $slider = get_field("master_slider");
-		 		
 		 		echo do_shortcode( $slider  );
 		 	?>   	
         </div>
@@ -387,7 +386,7 @@
 		<div id="willimsburg">
 		 <div class="row">
     		<div class="col-md-12">
-    			<h2>Willimsburg</h2>
+    			<h2>Williamsburg</h2>
 				<div class="train-container">
 					<div class="trains">
 						<?php 
@@ -468,3 +467,4 @@
     	</div> <!-- container row -->	
       </div>	<!-- section willimsburg -->
 <?php get_footer(); ?>
+

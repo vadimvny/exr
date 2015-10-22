@@ -8,10 +8,12 @@ get_header();
 <?php if (have_posts()): ?>
 <?php while (have_posts()): the_post(); ?>
 <div class="neighborhoods" id="neighborhoods">
-                    <div class="headerImage terms">
-                        	<h1><?php the_title(); ?></h1>
-                        	<h2>Brooklyn</h2>
-                    </div>
+        <div class="headerImage">
+            <h1><span class="headerCaption"><?php the_title(); ?></span></h1>
+            <div class="headerSubcaption">	
+                <h2>Brooklyn</h2>
+            </div>    
+        </div>
                     <div class="inner">
                         <!-- <div class="buttons">
                             <a href="javascript://" data-filter="" class="button active neighborhoods-filter">All</a>

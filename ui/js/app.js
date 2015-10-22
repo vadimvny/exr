@@ -169,7 +169,13 @@ jQuery('.about .inner-btn, .next, .about .nav ul li a').click(function() {
 	        jQuery('.nav a:first').addClass('active');
 	    }
 	});
-
+        jQuery("a[rel^='prettyPhoto']").prettyPhoto({
+            theme: 'none',
+            animation_speed: 'fast',
+            default_width: 400,
+            default_height: 300,
+            social_tools:false,
+        });
 }); //-->end document.ready
 
 

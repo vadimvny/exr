@@ -136,7 +136,7 @@ class EXR_Theme
 		}	
 		
 		echo '<select id="'. $name . '" name="'.$name.'">';
-		echo    '<option value="">--Not Selected--</option>';
+		echo '<option value="">--Not Selected--</option>';
 		foreach($agents as $agent){
 			$selected = '';
 			if($value == $agent->key){
@@ -184,15 +184,22 @@ class EXR_Theme
 				$checked = ' checked';
 			}
 			echo ' <input type="checkbox" id="' . $soldOutField . '" name="' . $soldOutField . '" value="sold-out" '.$checked.' /></p>';
-		
-		
+			
+			$addressField = 'exr_new_development_address';
+			$address = get_post_meta( $post->ID, $addressField, true);
+
+			echo '<p><label for ="' . $addressField . '">';
+			_e( 'New Development Address ', 'exr_new_development_textdomain' );
+			echo "</label></p>";
+			echo '<p><input type="text" id="' . $addressField . ' " name ="'. $addressField . '"style = "width:98%; height: 20px; " value="' . $address . '" /></p>'; 
+			
 			$amenitiesField = 'exr_new_development_amenities';
 			$amenities= get_post_meta( $post->ID, $amenitiesField , true );
-		
-			echo '<p><label for="'.$amenitiesField.'">';
-			_e( 'Describe Building Amenities ', 'exr_new_development_textdomain' );
-			echo '</label></p> ';
-			echo '<p><textarea id="' . $amenitiesField . '" name="' . $amenitiesField . '" style="width:98%;height:60px" >'. $amenities . '</textarea></p>';
+			
+			// echo '<p><label for="'.$amenitiesField.'">';
+			// _e( 'Describe Building Amenities ', 'exr_new_development_textdomain' );
+			// echo '</label></p> ';
+			// echo '<p><textarea id="' . $amenitiesField . '" name="' . $amenitiesField . '" style="width:98%;height:60px" >'. $amenities . '</textarea></p>';
 		 
 			$buildingField = 'exr_new_development_building';
 			$building = get_post_meta( $post->ID, $buildingField , true );
@@ -267,6 +274,14 @@ class EXR_Theme
 			update_post_meta( $post_id, 'exr_new_development_sold_out', '' );
 		}
 	
+		if ( isset( $_POST['exr_new_development_address'] ) ) {
+			$address = sanitize_text_field( $_POST['exr_new_development_address'] );
+			update_post_meta( $post_id, 'exr_new_development_address', $address );
+		}else{
+
+			update_post_meta( $post_id, 'exr_new_development_address', '' );
+		}
+
 		if ( isset( $_POST['exr_new_development_amenities'] ) ) {
 			$amenities = sanitize_text_field( $_POST['exr_new_development_amenities'] );
 			update_post_meta( $post_id, 'exr_new_development_amenities', $amenities );

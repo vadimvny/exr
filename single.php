@@ -10,11 +10,11 @@ get_header();
 		<div class="staticContent">
 			<div class="contentTabs">
 				 <div class="row"> 
-					<div class="col-md-6">	
+					<div class="col-md-7">	
 						<h2>Overview</h2>
-						<h4>Willimsburg, Brooklyn, New York</h4>
+						<h4><?php the_title(); ?>, BROOKLYN, NEW YORK</h4>
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-5">
 						<div class="social-container">
 					        <h3> Share </h3>
 					          <?php echo do_shortcode( '[cresta-social-share]' ); ?>
@@ -82,7 +82,7 @@ get_header();
 					</div> <!-- map end row -->
 
 					<div class="row">
-						<div class="col-md-4">
+						<div class="col-md-12">
 							<div class="train-container">
 								<div class="trains">
 									<p> Nearest Subways </p>
@@ -302,8 +302,9 @@ get_header();
 												?>		
 						
 											</div>
-											
+										<div class="we3-more-link-container">	
 											<button class="we3-more-link">More Listings</button> 
+										</div>	
 										</div>
 										<script>
 											jQuery(document).ready(function() {
