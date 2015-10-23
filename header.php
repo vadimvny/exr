@@ -11,7 +11,7 @@
         <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri() ); ?>/ui/css/style.css">
         <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri() ); ?>/ui/css/mobile.css">
         <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri() ); ?>/ui/css/prettyPhoto.css">
-        <link rel="stylesheet" type="text/css" href="path/to/jquery.tosrus.all.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri() ); ?>/ui/css/jquery.tosrus.all.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri() ); ?>/style.css">
         <link rel="shortcut icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/favicon.ico" />
         <?php wp_head(); ?>

@@ -30,8 +30,7 @@
        
 	<script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() ); ?>/ui/js/jquery.nouislider.all.min.js"></script>
 		 */ ?>
-	<script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() ); ?>ui/js/jquery.tosrus.min.all.js"></script>
-	<script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() ); ?>ui/js/hammer.js"></script>
+	<script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() ); ?>/ui/js/jquery.tosrus.min.all.js"></script>
 	<script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() ); ?>/ui/js/app.js"></script> 
 	<script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() ); ?>/ui/js/jquery.scrollme.min.js"></script> 
     </body>

@@ -78,11 +78,25 @@
         	<h4>Visit Website</h4>
         	<a href='<?php the_field('development_link'); ?>' class="dev-link" target="_blank"><?php the_field('development_link'); ?></a>
    		</div>	<!-- social-container -->
- 
+
+		<div class="counter"></div> 
         <div class="slider-container">
-		 	<?php $slider = get_field("master_slider");
-		 		echo do_shortcode( $slider  );
-		 	?>   	
+		<?php
+		    while ( have_posts() ) : the_post();
+		        if ( get_post_gallery() ) :
+		            $gallery = get_post_gallery( get_the_ID(), false );
+		            
+		            foreach( $gallery['src'] AS $src )
+		            {
+		                ?>
+		                
+		                <a href='<?php echo $src; ?>' class='gallery'><img src='<?php echo $src; ?>' /></a>
+		                
+		                <?php
+		            }
+		        endif;
+		    endwhile;
+		?>
         </div>
       </div>
      </div>
@@ -467,4 +481,23 @@
     	</div> <!-- container row -->	
       </div>	<!-- section willimsburg -->
 <?php get_footer(); ?>
+
+<script type="text/javascript">
+   jQuery(document).ready(function() {
+      jQuery(".slider-container").tosrus({
+      	infinite: true,
+      	slides: { 
+      		visible : 1,      		
+      	},
+      	show: true,
+	    pagination : {
+	      add: true,
+	      type: "thumbnails"
+	    }
+      });
+      jQuery('.slider-container a').tosrus();
+   	  var n = jQuery('.slider-container a').size;
+   	  jQuery( '.counter').append( n );
+   });
+</script>
 

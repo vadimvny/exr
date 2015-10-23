@@ -248,7 +248,7 @@ ABOUT PAGE
 .about #mission p {
     float: right;
     color: #97979C;
-    font-size: 15px;
+    font-size: 16px;
     font-family: GothamPro Light;
     line-height: 28px;
     color: #b8b8b8;
@@ -2705,7 +2705,7 @@ i.icon-mobile {
 }
 
 .single-new-developments .slider-container {
-    margin-top: 154px;
+    margin-top: 176px;
 }
 @media (max-width: 996px) {
     .single-new-developments .agents-container h2 {
@@ -4502,3 +4502,92 @@ input {
     background-color: #fff !important;
 }
 
+.tos-pagination {
+    position: relative !important;
+}
+
+.tos-uibg {
+    background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%) !important;
+    background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%) !important;
+    background-image: -ms-linear-gradient(bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%) !important;
+    background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%)!important ;
+    background-image: linear-gradient(bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%) !important;
+}
+
+
+.tos-prev {
+    left: 22px !important; 
+}
+
+.tos-next {
+    right: 22px !important;
+}
+
+.tos-prev, .tos-next {
+    height: 70px !important;
+    margin-top: 0px !important;
+    top: 23% !important;
+}
+.tos-wrapper.tos-inline {
+    position: relative;
+    bottom: 65px !important;
+}
+
+.tos-prev, .tos-next, .tos-close {
+    width: 31px !important;
+}
+
+.tos-slide a img {
+    width: 350px;
+    max-height: 200px;
+}
+
+@media (max-width: 1028px) {
+    .single-new-developments .slider-container {    
+     margin-top: 200px !important;
+    }
+    .tos-slide a img {
+      margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .single-new-developments .slider-container {    
+         margin-top: 300px !important;
+    }
+    .tos-pagination {
+        left: -8px !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .single-new-developments .slider-container {    
+         margin-top: 0 !important;
+         margin-bottom: 0 !important;
+    }
+
+    .tos-wrapper.tos-inline {
+        position: relative;
+        bottom: 2px !important;
+    }
+}
+
+@media (max-width: 320px) {
+    .single-new-developments .slider-container {    
+         margin-top: 0 !important;
+         margin-bottom: 0 !important;
+    }
+    .tos-pagination {
+        left: -8px !important;
+    }
+    .tos-wrapper.tos-inline {
+        position: relative;
+        bottom: 90px !important;
+        top: 75px;
+    }
+
+    .tos-wrapper.tos-inline {
+        position: relative;
+        top: 23px;
+    }
+}

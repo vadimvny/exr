@@ -304,6 +304,14 @@ class EXR_Theme
 	}
 }
 
+function remove_gallery($content) {
+  if ( is_single() ) {
+    $content = strip_shortcodes( $content );
+  }
+  return $content;
+}
+add_filter('the_content', 'remove_gallery');
+
 
 
 EXR_Theme::getInstance();
